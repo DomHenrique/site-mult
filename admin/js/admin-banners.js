@@ -164,13 +164,13 @@ window.AdminBanners = {
                   <input type="text" id="bannerImageUrl" placeholder="assets/img/... ou URL externa" class="w-full px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-white text-xs outline-none focus:border-purple-500" />
                 </div>
 
-                <!-- Mobile Box (1080x1350) -->
+                <!-- Mobile Box (1080x1080) -->
                 <div class="bg-white/5 p-4 rounded-2xl border border-white/10 space-y-3">
                   <div class="flex items-center justify-between">
                     <span class="text-xs font-bold text-white flex items-center gap-1.5">
                       <i class="ri-smartphone-line text-purple-400"></i> Versão Mobile
                     </span>
-                    <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-mono">1080 × 1350 px (4:5)</span>
+                    <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-mono">1080 × 1080 px (1:1)</span>
                   </div>
 
                   <div class="h-32 bg-black/40 rounded-xl overflow-hidden flex items-center justify-center border border-white/5 relative">

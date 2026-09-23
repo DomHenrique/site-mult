@@ -360,7 +360,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 @media (max-width: 768px) {
   .hero-slides-wrapper {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
     height: auto;
     min-height: auto;
     max-height: none;
@@ -370,7 +370,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 @media (max-width: 480px) {
   .hero-slides-wrapper {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
     height: auto;
     min-height: auto;
     max-height: none;
