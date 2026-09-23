@@ -359,19 +359,21 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 @media (max-width: 768px) {
   .hero-slides-wrapper {
-    min-height: 560px;
-    height: 560px;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    height: auto;
+    min-height: auto;
     max-height: none;
-    aspect-ratio: auto;
   }
 }
 
 @media (max-width: 480px) {
   .hero-slides-wrapper {
-    min-height: 540px;
-    height: 540px;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    height: auto;
+    min-height: auto;
     max-height: none;
-    aspect-ratio: auto;
   }
 }
 
@@ -426,7 +428,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 @media (max-width: 768px) {
   .hero-slide img {
-    object-position: center 15%;
+    object-position: center center;
   }
   .hero-overlay {
     background: linear-gradient(180deg, 
