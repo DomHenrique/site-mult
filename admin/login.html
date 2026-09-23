@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acesso Administrativo | Mult Serviços de Engenharia</title>
+  
+  <link rel="icon" type="image/png" href="../assets/logo/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mult: {
+              dark: '#1D0B44',
+              navy: '#12052c',
+              violet: '#6600CC'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-full bg-gradient-to-br from-[#0F0426] via-mult-dark to-[#180536] text-white flex items-center justify-center p-4 relative overflow-hidden font-body selection:bg-purple-600 selection:text-white">
+
+  <!-- Background decorative glows -->
+  <div class="absolute w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] -top-32 -left-32 pointer-events-none"></div>
+  <div class="absolute w-[400px] h-[400px] bg-indigo-600/15 rounded-full blur-[80px] -bottom-32 -right-32 pointer-events-none"></div>
+
+  <div class="w-full max-w-md relative z-10">
+    
+    <!-- Header Logo & Branding -->
+    <div class="text-center mb-8">
+      <a href="../index.html" class="inline-block transition hover:opacity-90">
+        <img src="../assets/logo/mult-logo-white.png" alt="Mult Engenharia" class="h-12 mx-auto object-contain drop-shadow-md" />
+      </a>
+      <h1 class="text-xl font-heading font-extrabold text-white mt-4 tracking-tight">
+        Painel de Gestão
+      </h1>
+      <p class="text-xs text-purple-200/70 mt-1">
+        Acesso restrito para administradores e editores da Mult.
+      </p>
+    </div>
+
+    <!-- Login Card -->
+    <div class="bg-white/[0.04] backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl shadow-purple-950/50">
+      
+      <!-- Feedback Alert -->
+      <div id="loginAlert" class="hidden p-3.5 rounded-xl text-xs font-semibold mb-6 flex items-center gap-2.5"></div>
+
+      <form id="loginForm" class="space-y-5">
+        
+        <div>
+          <label for="loginEmail" class="block text-xs font-bold uppercase tracking-wider text-purple-200 mb-2">
+            E-mail
+          </label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-purple-300/60">
+              <i class="ri-mail-line text-lg"></i>
+            </div>
+            <input 
+              type="email" 
+              id="loginEmail" 
+              required 
+              placeholder="admin@mult.eng.br" 
+              class="w-full pl-10 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-500 focus:bg-white/10 text-white placeholder-purple-300/30 text-sm outline-none transition font-medium"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="loginPassword" class="block text-xs font-bold uppercase tracking-wider text-purple-200 mb-2">
+            Senha
+          </label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-purple-300/60">
+              <i class="ri-lock-2-line text-lg"></i>
+            </div>
+            <input 
+              type="password" 
+              id="loginPassword" 
+              required 
+              placeholder="••••••••" 
+              class="w-full pl-10 pr-10 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-500 focus:bg-white/10 text-white placeholder-purple-300/30 text-sm outline-none transition font-medium"
+            />
+            <button 
+              type="button" 
+              id="togglePasswordBtn" 
+              class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-purple-300/60 hover:text-white"
+            >
+              <i class="ri-eye-line text-lg"></i>
+            </button>
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          id="submitBtn" 
+          class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 font-heading font-bold text-sm text-white tracking-wide shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 transition duration-200 flex items-center justify-center gap-2"
+        >
+          <span>Entrar no Sistema</span>
+          <i class="ri-arrow-right-line text-base"></i>
+        </button>
+
+      </form>
+
+      <!-- Quick Access Hint -->
+      <div class="mt-6 pt-5 border-t border-white/5 text-center">
+        <p class="text-[11px] text-purple-200/50">
+          Credencial SuperAdmin Padrão: <span class="text-purple-300 font-mono">admin@mult.eng.br</span>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Back to site link -->
+    <div class="text-center mt-6">
+      <a href="../index.html" class="text-xs text-purple-300/70 hover:text-white flex items-center justify-center gap-1.5 transition">
+        <i class="ri-arrow-left-line"></i> Voltar para a página inicial
+      </a>
+    </div>
+
+  </div>
+
+  <script src="../js/api-client.js"></script>
+  <script>
+    // Toggle password visibility
+    const toggleBtn = document.getElementById('togglePasswordBtn');
+    const passInput = document.getElementById('loginPassword');
+    toggleBtn?.addEventListener('click', () => {
+      const isPass = passInput.type === 'password';
+      passInput.type = isPass ? 'text' : 'password';
+      toggleBtn.innerHTML = `<i class="ri-${isPass ? 'eye-off' : 'eye'}-line text-lg"></i>`;
+    });
+
+    // Check if already logged in
+    (async () => {
+      const token = localStorage.getItem('mult_auth_token');
+      if (token) {
+        try {
+          const res = await ApiClient.getMe();
+          if (res && res.authenticated) {
+            window.location.href = 'index.html';
+          }
+        } catch (e) {}
+      }
+    })();
+
+    // Form submit
+    const form = document.getElementById('loginForm');
+    const alertBox = document.getElementById('loginAlert');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+
+      if (!email || !password) return;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin"></i> Autenticando...';
+      alertBox.classList.add('hidden');
+
+      try {
+        const res = await ApiClient.login(email, password);
+        localStorage.setItem('mult_auth_token', res.token);
+        localStorage.setItem('mult_user', JSON.stringify(res.user));
+
+        alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold mb-6 flex items-center gap-2.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
+        alertBox.innerHTML = '<i class="ri-checkbox-circle-fill text-lg"></i> Login autorizado! Redirecionando...';
+        alertBox.classList.remove('hidden');
+
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 600);
+      } catch (err) {
+        alertBox.className = 'p-3.5 rounded-xl text-xs font-semibold mb-6 flex items-center gap-2.5 bg-rose-500/20 text-rose-300 border border-rose-500/30';
+        alertBox.innerHTML = `<i class="ri-error-warning-fill text-lg"></i> ${err.message || 'Credenciais inválidas.'}`;
+        alertBox.classList.remove('hidden');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Entrar no Sistema</span> <i class="ri-arrow-right-line text-base"></i>';
+      }
+    });
+  </script>
+</body>
+</html>

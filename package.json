@@ -1,0 +1,12 @@
+{
+  "name": "site-mult-engenharia",
+  "version": "1.0.0",
+  "description": "Site Institucional e Painel Administrativo da Mult Serviços de Engenharia",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "author": "Gridd Marketing 360",
+  "license": "ISC"
+}

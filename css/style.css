@@ -1,0 +1,681 @@
+/* ==========================================================================
+   MULT SERVIÇOS DE ENGENHARIA - DESIGN SYSTEM & BASE CSS
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Mult Primary Palette */
+  --mult-primary-dark: #1D0B44;
+  --mult-primary-navy: #150634;
+  --mult-brand-violet: #6600CC;
+  --mult-brand-hover: #5500aa;
+  --mult-secondary-indigo: #4C1D95;
+  --mult-soft-lilac: #F7F5FC;
+  --mult-card-bg: #FFFFFF;
+  --mult-border-tint: rgba(102, 0, 204, 0.12);
+  
+  /* Functional Accents */
+  --mult-esg-green: #10B981;
+  --mult-esg-green-dark: #059669;
+  --mult-sst-blue: #2563EB;
+  --mult-innovation-purple: #7C3AED;
+  
+  /* Text & Neutrals */
+  --mult-text-dark: #1E1B4B;
+  --mult-text-body: #475569;
+  --mult-text-muted: #64748B;
+  --mult-text-light: #94A3B8;
+  
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-script: 'Caveat', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--mult-text-body);
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  color: var(--mult-text-dark);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* ==========================================================================
+   BUTTONS & MICROINTERACTIONS
+   ========================================================================== */
+
+.btn-mult-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--mult-primary-dark);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(29, 11, 68, 0.18);
+  border: 1px solid transparent;
+}
+
+.btn-mult-primary:hover {
+  background-color: var(--mult-brand-violet);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 0, 204, 0.28);
+}
+
+.btn-mult-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--mult-primary-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  border: 1.5px solid var(--mult-primary-dark);
+  transition: all 0.25s ease;
+}
+
+.btn-mult-outline:hover {
+  background-color: var(--mult-primary-dark);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   CARDS & CONTAINERS
+   ========================================================================== */
+
+.mult-card {
+  background: #FFFFFF;
+  border-radius: 1.25rem;
+  border: 1px solid var(--mult-border-tint);
+  box-shadow: 0 4px 20px -2px rgba(29, 11, 68, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mult-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(102, 0, 204, 0.3);
+  box-shadow: 0 16px 32px -4px rgba(102, 0, 204, 0.12);
+}
+
+.mult-card-dark {
+  background: linear-gradient(180deg, #1D0B44 0%, #150634 100%);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.mult-card-dark:hover {
+  transform: translateY(-4px);
+  border-color: rgba(102, 0, 204, 0.5);
+  box-shadow: 0 20px 35px -5px rgba(29, 11, 68, 0.35);
+}
+
+/* ==========================================================================
+   BADGES & ACCENTS
+   ========================================================================== */
+
+.badge-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--mult-brand-violet);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mult-organic-blob {
+  position: absolute;
+  border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+  background: linear-gradient(135deg, rgba(102, 0, 204, 0.12) 0%, rgba(76, 29, 149, 0.05) 100%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Organic Biomorphic Shape - Identidade Visual Mult */
+.shape-mult-organic {
+  border-radius: 38% 62% 55% 45% / 48% 44% 56% 52%;
+  overflow: hidden;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: border-radius, transform;
+}
+
+.shape-mult-organic:hover {
+  border-radius: 46% 54% 48% 52% / 54% 50% 50% 46%;
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes ambientPulseGlow {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.06); }
+}
+
+.animate-ambient-glow {
+  animation: ambientPulseGlow 7s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F1F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4B5FD;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8B5CF6;
+}
+
+/* ==========================================================================
+   TEAM 3D CAROUSEL & IMMERSIVE CARDS (NOSSAS MULTIPLICADORAS)
+   ========================================================================== */
+
+.brand-bg-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.carousel-card {
+  position: absolute;
+  width: 18rem; /* 288px default mobile */
+  height: 420px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-sizing: border-box;
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+@media (min-width: 640px) {
+  .carousel-card {
+    width: 20rem; /* 320px */
+    height: 460px;
+  }
+}
+
+.carousel-card.active-card {
+  box-shadow: 0 20px 60px rgba(102, 0, 204, 0.45);
+}
+
+.linkedin-btn-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.linkedin-btn-card:hover {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+}
+
+/* ==========================================================================
+   MOLECULAR INNOVATION CHAIN (SEÇÃO COMO A MULT ATUA)
+   ========================================================================== */
+
+.molecular-bg-pattern {
+  background-image: radial-gradient(rgba(102, 0, 204, 0.08) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+@keyframes molecularOrbitRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes molecularPulseFlow {
+  0% { stroke-dashoffset: 200; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes molecularNodeGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.35), 0 0 30px rgba(124, 58, 237, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(147, 51, 234, 0.55), 0 0 45px rgba(124, 58, 237, 0.3);
+  }
+}
+
+.molecular-node-orb {
+  animation: molecularNodeGlow 4s ease-in-out infinite;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.molecular-node-orb:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.7), 0 0 50px rgba(102, 0, 204, 0.45);
+}
+
+.molecular-valence-ring {
+  animation: molecularOrbitRotate 14s linear infinite;
+  transform-origin: center center;
+}
+
+.molecular-bond-pulse {
+  stroke-dasharray: 12 16;
+  animation: molecularPulseFlow 8s linear infinite;
+}
+
+.molecular-step-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.molecular-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -4px rgba(102, 0, 204, 0.14);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+/* ==========================================================================
+   HERO CAROUSEL — PADRÃO MORARIS & KASTELO (ALTA PERFORMANCE & MODO HÍBRIDO)
+   ========================================================================== */
+
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: var(--mult-primary-navy);
+}
+
+.hero-slides-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 580;
+  min-height: auto;
+  height: auto;
+  max-height: 580px;
+}
+
+@media (max-width: 1024px) {
+  .hero-slides-wrapper {
+    aspect-ratio: 1920 / 580;
+    min-height: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slides-wrapper {
+    aspect-ratio: 4 / 5;
+    min-height: auto;
+    max-height: 640px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slides-wrapper {
+    aspect-ratio: 4 / 5;
+    min-height: auto;
+    max-height: 560px;
+    height: auto;
+  }
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.75s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.hero-slide-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.hero-slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+/* Máscara de Contraste e Elegância (Overlay) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(21, 6, 52, 0.94) 0%, rgba(21, 6, 52, 0.70) 52%, rgba(21, 6, 52, 0.20) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero-slide img {
+    object-position: center top;
+  }
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(21, 6, 52, 0.25) 0%, rgba(21, 6, 52, 0.72) 42%, rgba(21, 6, 52, 0.96) 100%);
+  }
+}
+
+/* Container de Conteúdo Tipográfico */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    align-items: flex-end;
+    padding-bottom: 4rem;
+  }
+}
+
+.hero-text {
+  max-width: 660px;
+}
+
+.hero-slide.active .hero-text {
+  animation: heroFadeIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botões de Navegação Circular Lateral */
+.hero-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.hero-nav-btn:hover {
+  background: var(--mult-brand-violet);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 8px 24px rgba(102, 0, 204, 0.45);
+}
+
+.hero-nav-prev {
+  left: 1.5rem;
+}
+
+.hero-nav-next {
+  right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero-nav-btn {
+    display: none;
+  }
+}
+
+/* Indicadores de Slides (Pills Animadas) */
+.hero-indicators {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 10;
+  padding: 0.35rem 0.75rem;
+  background: rgba(21, 6, 52, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.45);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-dot:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.hero-dot.active {
+  width: 28px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   PROJETOS CAROUSEL — LOOP INFINITO & INDICADORES (DOTS ABAIXO)
+   ========================================================================== */
+
+.projects-carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.projects-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.projects-track {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.projects-slide {
+  width: 100%;
+  min-width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Barra de Navegação e Controles Inferiores */
+.projects-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  user-select: none;
+}
+
+.projects-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: #FFFFFF;
+  border: 1px solid rgba(102, 0, 204, 0.16);
+  color: #4A0080;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  box-shadow: 0 4px 14px rgba(102, 0, 204, 0.08);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-nav-btn:hover {
+  background: #6600CC;
+  color: #FFFFFF;
+  border-color: #6600CC;
+  box-shadow: 0 6px 20px rgba(102, 0, 204, 0.28);
+  transform: translateY(-2px);
+}
+
+.projects-nav-btn:active {
+  transform: translateY(0);
+}
+
+.projects-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  border: 1px solid rgba(102, 0, 204, 0.16);
+  box-shadow: 0 4px 14px rgba(102, 0, 204, 0.06);
+}
+
+.projects-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #D1C4E9;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-dot:hover {
+  background: #9966FF;
+  transform: scale(1.2);
+}
+
+.projects-dot.active {
+  width: 32px;
+  background: #6600CC;
+  box-shadow: 0 2px 10px rgba(102, 0, 204, 0.4);
+}
+
+@media (max-width: 640px) {
+  .projects-controls {
+    margin-top: 1.5rem;
+    gap: 0.5rem;
+  }
+  
+  .projects-nav-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
+  }
+
+  .projects-dots {
+    padding: 0.35rem 0.65rem;
+    gap: 0.4rem;
+  }
+
+  .projects-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .projects-dot.active {
+    width: 24px;
+  }
+}
+
+

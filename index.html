@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mult Serviços de Engenharia | Conhecimento que multiplica resultados</title>
+  <meta name="description" content="Hub de especialistas em engenharia, qualidade, segurança do trabalho, ESG e inovação científica. Soluções técnicas para transformar seu negócio." />
+  <meta name="keywords" content="engenharia, consultoria técnica, inovação, alimentos funcionais, SST, meio ambiente, ESG, química" />
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/logo/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/logo/favicon.png" />
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mult: {
+              dark: '#1D0B44',
+              navy: '#150634',
+              violet: '#6600CC',
+              indigo: '#4C1D95',
+              lilac: '#F7F5FC',
+              esg: '#10B981'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+            script: ['"Caveat"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Design System Styles -->
+  <link rel="stylesheet" href="css/style.css?v=2.5" />
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-purple-600 selection:text-white">
+
+  <!-- ========================================================================
+       TOP HEADER / NAVBAR
+       ======================================================================== -->
+  <header id="mainHeader" class="sticky top-0 z-50 bg-white transition-all duration-300 border-b border-purple-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-2 group">
+          <img src="assets/logo/mult-logo-color.png" alt="Mult Serviços de Engenharia" class="h-10 sm:h-12 w-auto object-contain transition duration-200 group-hover:scale-[1.02]" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-semibold text-slate-700">
+          <a href="#quem-somos" class="hover:text-purple-700 transition">Quem Somos</a>
+          <a href="#solucoes" class="hover:text-purple-700 transition">Soluções</a>
+          <a href="#como-atuamos" class="hidden hover:text-purple-700 transition" style="display: none;">Como Atuamos</a>
+          <a href="#projetos" class="hover:text-purple-700 transition">Projetos</a>
+          <a href="#equipe" class="hover:text-purple-700 transition">Especialistas</a>
+          <a href="#multiplicador" class="hover:text-purple-700 transition">Seja um Multiplicador</a>
+          <a href="#contato" class="hover:text-purple-700 transition">Contato</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="#contato" class="btn-mult-primary">
+            <span>FALE COM A MULT</span>
+            <i class="ri-arrow-right-line text-base font-bold"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuToggle" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-purple-50 transition" aria-label="Abrir menu">
+          <i class="ri-menu-3-line text-2xl"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-purple-100 px-6 py-5 space-y-4 shadow-xl">
+      <a href="#quem-somos" class="nav-link-item block text-base font-semibold text-slate-800 hover:text-purple-700 py-1">Quem Somos</a>
+      <a href="#solucoes" class="nav-link-item block text-base font-semibold text-slate-800 hover:text-purple-700 py-1">Soluções</a>
+      <a href="#como-atuamos" class="hidden nav-link-item text-base font-semibold text-slate-800 hover:text-purple-700 py-1" style="display: none;">Como Atuamos</a>
+      <a href="#projetos" class="nav-link-item block text-base font-semibold text-slate-800 hover:text-purple-700 py-1">Projetos</a>
+      <a href="#equipe" class="nav-link-item block text-base font-semibold text-slate-800 hover:text-purple-700 py-1">Especialistas</a>
+      <a href="#multiplicador" class="nav-link-item block text-base font-semibold text-slate-800 hover:text-purple-700 py-1">Seja um Multiplicador</a>
+      <a href="#contato" class="nav-link-item block text-base font-semibold text-slate-800 hover:text-purple-700 py-1">Contato</a>
+      <div class="pt-3 border-t border-slate-100">
+        <a href="#contato" class="btn-mult-primary w-full text-center">
+          <span>FALE COM A MULT</span>
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SECTION 1: HERO CAROUSEL (PADRÃO MORARIS & KASTELO - MODO HÍBRIDO)
+       ======================================================================== -->
+  <section id="hero" class="relative overflow-hidden bg-slate-950">
+    <div class="hero-carousel" id="heroCarousel" aria-label="Banners principais">
+      
+      <!-- Container dos Slides -->
+      <div class="hero-slides-wrapper" id="heroSlidesWrapper">
+        
+        <!-- Slide 1 Padrão: Institucional & Fundadora -->
+        <div class="hero-slide active" data-slide-index="0">
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/img/hero-founder-clean.png" />
+            <img src="assets/img/hero-founder-clean.png" alt="Soluções técnicas para um futuro mais saudável" fetchpriority="high" loading="eager" />
+          </picture>
+          <div class="hero-overlay" aria-hidden="true"></div>
+          <div class="hero-content">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div class="hero-text text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-purple-200 text-xs sm:text-sm font-extrabold uppercase tracking-wider mb-4">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>ENGENHARIA • CIÊNCIA • INOVAÇÃO • SUSTENTABILIDADE</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-4">
+                  Soluções técnicas para um futuro mais saudável.
+                </h1>
+                <p class="text-base sm:text-lg text-purple-100/90 leading-relaxed mb-6 max-w-2xl">
+                  Um hub multidisciplinar de especialistas que conecta conhecimento, engenharia e inovação para desenvolver produtos, solucionar desafios e impulsionar negócios.
+                </p>
+                <div class="flex items-center gap-4 pt-1">
+                  <a href="#contato" class="btn-mult-primary text-base px-7 py-3.5 shadow-xl bg-purple-600 hover:bg-purple-500 text-white">
+                    <span>FALE SOBRE SEU PROJETO</span>
+                    <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 Padrão: Engenharia de Alimentos & P&D -->
+        <div class="hero-slide" data-slide-index="1">
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/img/engenharia-de-alimentos.jpeg" />
+            <img src="assets/img/engenharia-de-alimentos.jpeg" alt="Engenharia de Alimentos & Inovação Industrial" loading="lazy" />
+          </picture>
+          <div class="hero-overlay" aria-hidden="true"></div>
+          <div class="hero-content">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div class="hero-text text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-purple-200 text-xs sm:text-sm font-extrabold uppercase tracking-wider mb-4">
+                  <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                  <span>P&D • FORMULAÇÕES • QUALIDADE TÉCNICA</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-4">
+                  Engenharia de Alimentos & Inovação Industrial
+                </h2>
+                <p class="text-base sm:text-lg text-purple-100/90 leading-relaxed mb-6 max-w-2xl">
+                  Desenvolvimento de formulações funcionais, rotulagem regulatória, shelf-life e otimização de processos produtivos com rigor científico.
+                </p>
+                <div class="flex items-center gap-4 pt-1">
+                  <a href="#solucoes" class="btn-mult-primary text-base px-7 py-3.5 shadow-xl bg-purple-600 hover:bg-purple-500 text-white">
+                    <span>CONHEÇA NOSSAS SOLUÇÕES</span>
+                    <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 Padrão: SST, Meio Ambiente & ESG -->
+        <div class="hero-slide" data-slide-index="2">
+          <picture>
+            <source media="(max-width: 768px)" srcset="assets/img/multiplicadoras-banner-clean.jpg" />
+            <img src="assets/img/multiplicadoras-banner-clean.jpg" alt="Segurança do Trabalho, Meio Ambiente & ESG" loading="lazy" />
+          </picture>
+          <div class="hero-overlay" aria-hidden="true"></div>
+          <div class="hero-content">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div class="hero-text text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-purple-200 text-xs sm:text-sm font-extrabold uppercase tracking-wider mb-4">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>SST • CONFORMIDADE NR • SUSTENTABILIDADE</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-4">
+                  Segurança do Trabalho, Meio Ambiente & ESG
+                </h2>
+                <p class="text-base sm:text-lg text-purple-100/90 leading-relaxed mb-6 max-w-2xl">
+                  Adequação técnica a Normas Regulamentadoras, laudos periciais, ergonomia e soluções sustentáveis que protegem vidas e valorizam sua indústria.
+                </p>
+                <div class="flex items-center gap-4 pt-1">
+                  <a href="#contato" class="btn-mult-primary text-base px-7 py-3.5 shadow-xl bg-purple-600 hover:bg-purple-500 text-white">
+                    <span>SOLICITAR DIAGNÓSTICO</span>
+                    <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botões de Navegação Lateral -->
+      <button type="button" class="hero-nav-btn hero-nav-prev" id="heroPrevBtn" aria-label="Banner anterior">
+        <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="hero-nav-btn hero-nav-next" id="heroNextBtn" aria-label="Próximo banner">
+        <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+      </button>
+
+      <!-- Pílulas Indicadoras -->
+      <div class="hero-indicators" id="heroIndicators">
+        <button type="button" class="hero-dot active" data-slide-to="0" aria-label="Slide 1"></button>
+        <button type="button" class="hero-dot" data-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" class="hero-dot" data-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+    </div>
+
+    <!-- ====================================================================
+         4 CORE PILLARS BAR (HORIZONTAL STRIP INTEGRADA ABAIXO DO CARROSSEL)
+         ==================================================================== -->
+    <div class="bg-white border-b border-purple-100/80 py-5 relative z-10 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 items-center justify-between">
+          
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <div class="w-10 h-10 rounded-xl bg-purple-100/80 text-purple-700 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.14439 0.75V8.75L2.48439 12.715C1.55239 13.98 -0.310606 15.991 1.53639 17.337C2.10439 17.75 3.15139 17.75 5.24639 17.75H11.2554C13.3494 17.75 14.3964 17.75 14.9644 17.337C16.8114 15.991 14.9484 13.98 14.0164 12.715L10.3564 8.75V0.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.75 0.75H9.75M3.75 14.25H12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span id="heroBadge1" class="text-xs sm:text-sm font-extrabold text-slate-800 tracking-wider">
+              QUALIDADE & INOVAÇÃO
+            </span>
+          </div>
+
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <div class="w-10 h-10 rounded-xl bg-indigo-100/80 text-indigo-700 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.00781 8.99292L7.04181 10.1739C7.13681 10.2829 7.30781 10.2739 7.39181 10.1579L9.49181 7.25092" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.21702 18.5709C7.37023 18.6875 7.55747 18.7507 7.75002 18.7507C7.94257 18.7507 8.1298 18.6875 8.28302 18.5709C9.91802 17.3439 14.75 13.3369 14.75 8.76692V3.83692C14.751 3.70975 14.7049 3.58672 14.6205 3.4916C14.5361 3.39648 14.4194 3.33602 14.293 3.32192C12.2907 3.11683 10.3716 2.41343 8.71102 1.27592L8.10102 0.858924C7.99771 0.787977 7.87534 0.75 7.75002 0.75C7.6247 0.75 7.50232 0.787977 7.39902 0.858924L6.78902 1.27592C5.12843 2.41343 3.20936 3.11683 1.20702 3.32192C1.08063 3.33602 0.963952 3.39648 0.879544 3.4916C0.795135 3.58672 0.748986 3.70975 0.750017 3.83692V8.76692C0.750017 13.3369 5.58202 17.3439 7.21702 18.5689" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span id="heroBadge2" class="text-xs sm:text-sm font-extrabold text-slate-800 tracking-wider">
+              SEGURANÇA DO TRABALHO
+            </span>
+          </div>
+
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.723 13.7783C10.348 18.3543 16.449 12.2533 15.686 0.814261C4.248 0.0522608 -1.852 6.15326 2.723 13.7783ZM2.723 13.7783L0.75 15.7503M2.723 13.7783L6.85 9.65026" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span id="heroBadge3" class="text-xs sm:text-sm font-extrabold text-slate-800 tracking-wider">
+              MEIO AMBIENTE & ESG
+            </span>
+          </div>
+
+          <div class="flex items-center gap-3 justify-center lg:justify-start">
+            <div class="w-10 h-10 rounded-xl bg-purple-100/80 text-purple-800 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.75 15.7616C14.75 14.1046 12.511 12.7616 9.75 12.7616C6.989 12.7616 4.75 14.1046 4.75 15.7616M18.75 12.7616C18.75 11.5316 17.516 10.4746 15.75 10.0116M0.75 12.7616C0.75 11.5316 1.984 10.4746 3.75 10.0116M15.75 5.99762C16.0463 5.73572 16.2878 5.41782 16.4608 5.06222C16.6338 4.70662 16.7347 4.32034 16.7579 3.92558C16.781 3.53083 16.7259 3.13539 16.5956 2.76202C16.4654 2.38865 16.2627 2.0447 15.999 1.74997C15.7354 1.45523 15.4161 1.21552 15.0595 1.04463C14.7029 0.873733 14.3161 0.775022 13.9212 0.754173C13.5263 0.733324 13.1312 0.790748 12.7586 0.923142C12.386 1.05554 12.0432 1.26029 11.75 1.52562M3.75 5.99762C3.1623 5.46577 2.80896 4.72295 2.76717 3.93142C2.72538 3.1399 2.99853 2.364 3.52696 1.77321C4.05539 1.18243 4.79614 0.824781 5.58741 0.778391C6.37868 0.732 7.15616 1.00064 7.75 1.52562M9.75 9.76162C8.95435 9.76162 8.19129 9.44555 7.62868 8.88295C7.06607 8.32034 6.75 7.55727 6.75 6.76162C6.75 5.96597 7.06607 5.20291 7.62868 4.6403C8.19129 4.07769 8.95435 3.76162 9.75 3.76162C10.5456 3.76162 11.3087 4.07769 11.8713 4.6403C12.4339 5.20291 12.75 5.96597 12.75 6.76162C12.75 7.55727 12.4339 8.32034 11.8713 8.88295C11.3087 9.44555 10.5456 9.76162 9.75 9.76162Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span id="heroBadge4" class="text-xs sm:text-sm font-extrabold text-slate-800 tracking-wider">
+              RESPONSABILIDADE SOCIAL
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2: QUEM SOMOS (MANIFESTO + TRÍADE INSTITUCIONAL + BRAND CARD)
+       ======================================================================== -->
+  <!-- ========================================================================
+       SECTION 2: QUEM SOMOS (LAYOUT MODELO: 6 COLUNAS 2/6 + 4/6)
+       ======================================================================== -->
+  <section id="quem-somos" class="py-16 sm:py-20 lg:py-24 bg-[#EFE9F6] border-y border-purple-200/50 relative overflow-hidden">
+    <!-- Ambient subtle background glow -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-300/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-6 gap-10 lg:gap-12 items-center">
+        
+        <!-- Bloco Esquerdo: Texto Manifesto (2 colunas das 6 = 2/6) -->
+        <div class="lg:col-span-2 space-y-5 lg:pr-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-purple-700 block">
+            QUEM SOMOS
+          </span>
+
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 tracking-tight leading-[1.15]">
+            Conhecimento que<br class="hidden sm:block" /> se multiplica.<br />
+            <span class="text-purple-800">Resultados que também.</span>
+          </h2>
+
+          <p class="text-slate-700 text-sm leading-relaxed">
+            A <strong class="text-slate-900 font-bold">Mult</strong> é um hub de especialistas que reúne diferentes áreas do conhecimento para apoiar empresas no desenvolvimento de produtos, implantação de projetos, adequação de processos e solução de desafios técnicos.
+          </p>
+
+          <div class="pt-2">
+            <a 
+              href="#solucoes" 
+              class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-purple-900 hover:bg-purple-800 text-white text-xs font-extrabold uppercase tracking-wider transition-all duration-200 shadow-md shadow-purple-900/20 group"
+            >
+              <span>CONHEÇA A MULT</span>
+              <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bloco Direito: 3 Cards Integrados sem Moldura (4 colunas das 6 = 4/6) -->
+        <div class="lg:col-span-4 lg:border-l lg:border-purple-200/80 lg:pl-10">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-purple-200/70 text-center">
+            
+            <!-- Card 1: MISSÃO -->
+            <div class="flex flex-col items-center pt-6 sm:pt-0 sm:px-4 group">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border-2 border-purple-200/90 shadow-sm flex items-center justify-center mb-4 group-hover:border-purple-500 group-hover:scale-105 transition-all duration-300">
+                <svg class="w-9 h-9 sm:w-10 sm:h-10 text-purple-800 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 21 21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10.25 6.74946V13.7495M7.24996 11.9995L13.25 8.49946M7.24996 8.49946L13.25 11.9995M7.96297 1.88946C8.54396 1.39446 8.83496 1.14646 9.13896 1.00146C9.48594 0.835915 9.86552 0.75 10.25 0.75C10.6344 0.75 11.014 0.835915 11.361 1.00146C11.665 1.14646 11.956 1.39446 12.537 1.88946C13.136 2.39946 13.744 2.65746 14.544 2.72046C15.305 2.78146 15.686 2.81246 16.004 2.92446C16.738 3.18446 17.316 3.76146 17.575 4.49646C17.687 4.81346 17.718 5.19446 17.779 5.95646C17.842 6.75646 18.099 7.36346 18.609 7.96246C19.105 8.54346 19.353 8.83446 19.498 9.13846C19.834 9.84146 19.834 10.6585 19.498 11.3605C19.353 11.6645 19.105 11.9555 18.61 12.5365C18.1144 13.0925 17.8215 13.7999 17.779 14.5435C17.718 15.3045 17.687 15.6855 17.575 16.0035C17.4466 16.3659 17.2388 16.6951 16.9668 16.9669C16.6948 17.2387 16.3655 17.4463 16.003 17.5745C15.686 17.6865 15.305 17.7175 14.543 17.7785C13.743 17.8415 13.136 18.0985 12.537 18.6085C11.956 19.1045 11.665 19.3525 11.361 19.4975C11.014 19.663 10.6344 19.7489 10.25 19.7489C9.86552 19.7489 9.48594 19.663 9.13896 19.4975C8.83496 19.3525 8.54396 19.1045 7.96297 18.6095C7.40692 18.1139 6.69957 17.821 5.95596 17.7785C5.19496 17.7175 4.81396 17.6865 4.49596 17.5745C4.13351 17.4461 3.80434 17.2383 3.53252 16.9663C3.26071 16.6943 3.05313 16.365 2.92496 16.0025C2.81296 15.6855 2.78196 15.3045 2.72096 14.5425C2.67845 13.7993 2.38595 13.0924 1.89096 12.5365C1.39496 11.9555 1.14696 11.6645 1.00096 11.3605C0.835572 11.0134 0.749827 10.6338 0.75 10.2494C0.750173 9.86491 0.836259 9.48536 1.00196 9.13846C1.14696 8.83446 1.39496 8.54346 1.88996 7.96246C2.40996 7.35146 2.65896 6.73946 2.72096 5.95546C2.78196 5.19446 2.81296 4.81346 2.92496 4.49546C3.05336 4.13301 3.26115 3.80384 3.53314 3.53202C3.80512 3.26021 4.13443 3.05263 4.49696 2.92446C4.81396 2.81246 5.19496 2.78146 5.95696 2.72046C6.7001 2.67795 7.40704 2.38445 7.96297 1.88946Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="text-xs sm:text-sm font-black text-purple-950 uppercase tracking-wider mb-2 leading-snug">
+                MISSÃO
+              </h3>
+              <p class="text-slate-600 text-xs leading-relaxed max-w-[240px] mx-auto text-balance">
+                Soluções aplicáveis<br class="hidden sm:inline"> para o seu&nbsp;negócio.
+              </p>
+            </div>
+
+            <!-- Card 2: VISÃO -->
+            <div class="flex flex-col items-center pt-6 sm:pt-0 sm:px-4 group">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border-2 border-purple-200/90 shadow-sm flex items-center justify-center mb-4 group-hover:border-purple-500 group-hover:scale-105 transition-all duration-300">
+                <svg class="w-9 h-9 sm:w-10 sm:h-10 text-purple-800 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5.75 7.75L9.75 9.75M13.75 7.75V11.75L9.75 13.75L5.75 11.75V7.75L9.75 5.75L13.75 7.75ZM9.75 9.75L13.75 7.75M9.75 9.75V13.75M7.15 18.75C4.91 18.75 3.79 18.75 2.934 18.314C2.18139 17.9305 1.56949 17.3186 1.186 16.566C0.75 15.71 0.75 14.59 0.75 12.35M18.75 12.35C18.75 14.59 18.75 15.71 18.314 16.566C17.9305 17.3186 17.3186 17.9305 16.566 18.314C15.71 18.75 14.59 18.75 12.35 18.75M12.35 0.75C14.59 0.75 15.71 0.75 16.566 1.186C17.3186 1.56949 17.9305 2.18139 18.314 2.934C18.75 3.79 18.75 4.91 18.75 7.15M7.15 0.75C4.91 0.75 3.79 0.75 2.934 1.186C2.18139 1.56949 1.56949 2.18139 1.186 2.934C0.75 3.79 0.75 4.91 0.75 7.15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="text-xs sm:text-sm font-black text-purple-950 uppercase tracking-wider mb-2 leading-snug">
+                VISÃO
+              </h3>
+              <p class="text-slate-600 text-xs leading-relaxed max-w-[240px] mx-auto text-balance">
+                Da ideia ao mercado<br class="hidden sm:inline"> com&nbsp;segurança.
+              </p>
+            </div>
+
+            <!-- Card 3: VALORES -->
+            <div class="flex flex-col items-center pt-6 sm:pt-0 sm:px-4 group">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white border-2 border-purple-200/90 shadow-sm flex items-center justify-center mb-4 group-hover:border-purple-500 group-hover:scale-105 transition-all duration-300">
+                <svg class="w-9 h-9 sm:w-10 sm:h-10 text-purple-800 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 17 17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4.25 10.35L6.65 12.75M4.25 10.35C4.25 10.35 5.667 6.808 7.684 4.35M4.25 10.35C-0.969 9.045 3.72 4.35 7.684 4.35M6.65 12.75C6.65 12.75 10.192 11.333 12.65 9.316M6.65 12.75C7.955 17.968 12.65 13.28 12.65 9.316M7.684 4.35C9.724 1.864 13.087 0.75 16.25 0.75C16.25 3.913 15.136 7.275 12.65 9.316M10.95 5.957L11.657 5.25M2.019 13.076C1.067 13.877 0.75 16.255 0.75 16.255C0.75 16.255 3.122 15.937 3.921 14.983C4.371 14.449 4.365 13.629 3.864 13.133C3.61631 12.9002 3.29207 12.7659 2.95229 12.7554C2.6125 12.7449 2.28059 12.8589 2.019 13.076Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3 class="text-xs sm:text-sm font-black text-purple-950 uppercase tracking-wider mb-2 leading-snug">
+                VALORES
+              </h3>
+              <p class="text-slate-600 text-xs leading-relaxed max-w-[240px] mx-auto text-balance">
+                Inovação com&nbsp;propósito.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Texto 4 Card: Propósito da Marca (Abaixo dos 3 cards conforme modelo/print) -->
+          <div class="mt-8 pt-6 border-t border-purple-200/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left bg-white/50 backdrop-blur-xs rounded-2xl p-5 border border-purple-200/60 shadow-xs">
+            <div class="flex items-center gap-3 justify-center sm:justify-start">
+              <div class="w-2.5 h-2.5 rounded-full bg-purple-700 shrink-0 hidden sm:block"></div>
+              <p class="text-slate-800 text-sm sm:text-base font-semibold leading-snug text-balance">
+                Diferentes especialidades. <span class="text-purple-800 font-extrabold whitespace-nowrap">Um mesmo propósito.</span>
+              </p>
+            </div>
+            <div class="shrink-0">
+              <span class="text-xs font-black uppercase tracking-widest text-purple-950 bg-white/90 border border-purple-200 shadow-2xs px-4 py-2 rounded-full inline-block">
+                MULT &bull; UM HUB DE SOLUÇÕES TÉCNICAS
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3: DIAGNÓSTICO / MOMENTO DO PROJETO (INTERATIVO)
+       ======================================================================== -->
+  <section id="diagnostico" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="badge-eyebrow">EM QUE MOMENTO ESTÁ O SEU PROJETO?</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-950 mt-2">
+          A Mult pode te ajudar.
+        </h2>
+        <p class="text-slate-600 mt-3">
+          Identifique o seu desafio atual e conectaremos imediatamente os especialistas adequados.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Criar -->
+        <div class="mult-card p-8 flex flex-col justify-between hover:border-purple-400">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center font-bold">
+              <svg class="w-7 h-7" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.75 8.37C15.75 10.95 14.48 12.935 12.548 14.242C12.098 14.546 11.873 14.698 11.762 14.872C11.652 15.044 11.613 15.272 11.538 15.726L11.478 16.079C11.346 16.877 11.279 17.276 10.999 17.513C10.719 17.75 10.315 17.75 9.506 17.75H6.894C6.085 17.75 5.681 17.75 5.401 17.513C5.121 17.276 5.055 16.877 4.921 16.079L4.863 15.726C4.787 15.273 4.75 15.046 4.64 14.874C4.53 14.702 4.304 14.548 3.853 14.24C1.942 12.933 0.75 10.949 0.75 8.37C0.75 4.163 4.108 0.750004 8.25 0.750004C8.75387 0.749471 9.25648 0.800402 9.75 0.902004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.25 17.75V18.75C10.25 19.693 10.25 20.164 9.957 20.457C9.664 20.75 9.193 20.75 8.25 20.75C7.307 20.75 6.836 20.75 6.543 20.457C6.25 20.164 6.25 19.693 6.25 18.75V17.75M13.25 0.750004L13.508 1.447C13.846 2.361 14.015 2.818 14.348 3.151C14.682 3.485 15.139 3.654 16.053 3.992L16.75 4.25L16.053 4.508C15.139 4.846 14.682 5.015 14.349 5.348C14.015 5.682 13.846 6.139 13.508 7.053L13.25 7.75L12.992 7.053C12.654 6.139 12.485 5.682 12.152 5.349C11.818 5.015 11.361 4.846 10.447 4.508L9.75 4.25L10.447 3.992C11.361 3.654 11.818 3.485 12.151 3.152C12.485 2.818 12.654 2.361 12.992 1.447L13.25 0.750004Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">QUERO CRIAR</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Tenho uma ideia de produto ou formulação técnica e quero desenvolver do zero com validação científica.
+            </p>
+          </div>
+          <div class="pt-6">
+            <button data-moment="Quero Criar" class="diagnostico-action-btn w-full inline-flex items-center justify-between text-sm font-extrabold text-purple-700 hover:text-purple-900 group">
+              <span>Desenvolver minha ideia</span>
+              <i class="ri-arrow-right-line text-lg group-hover:translate-x-1 transition"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Melhorar -->
+        <div class="mult-card p-8 flex flex-col justify-between hover:border-purple-400">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold">
+              <svg class="w-7 h-7" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.86 1.65C7.88479 1.40334 8.00032 1.17467 8.18417 1.00838C8.36802 0.842077 8.60709 0.749997 8.855 0.75H10.645C10.8929 0.749997 11.132 0.842077 11.3158 1.00838C11.4997 1.17467 11.6152 1.40334 11.64 1.65L11.673 1.983C12.451 2.17562 13.1957 2.48406 13.882 2.898L14.141 2.686C14.3329 2.52908 14.5763 2.44905 14.8239 2.46143C15.0715 2.47381 15.3057 2.57772 15.481 2.753L16.747 4.019C16.9223 4.19432 17.0262 4.42849 17.0386 4.6761C17.051 4.9237 16.9709 5.16707 16.814 5.359L16.602 5.619C17.011 6.295 17.322 7.038 17.517 7.827L17.849 7.86C18.0958 7.88456 18.3247 7.99999 18.4913 8.18386C18.6578 8.36774 18.75 8.60694 18.75 8.855V10.645C18.75 10.8929 18.6579 11.132 18.4916 11.3158C18.3253 11.4997 18.0967 11.6152 17.85 11.64L17.517 11.673C17.3244 12.451 17.0159 13.1957 16.602 13.882L16.814 14.141C16.9709 14.3329 17.051 14.5763 17.0386 14.8239C17.0262 15.0715 16.9223 15.3057 16.747 15.481L15.481 16.747C15.3057 16.9223 15.0715 17.0262 14.8239 17.0386C14.5763 17.051 14.3329 16.9709 14.141 16.814L13.881 16.602C13.195 17.0158 12.4507 17.3243 11.673 17.517L11.64 17.849C11.6154 18.0958 11.5 18.3247 11.3161 18.4913C11.1323 18.6578 10.8931 18.75 10.645 18.75H8.855C8.60709 18.75 8.36802 18.6579 8.18417 18.4916C8.00032 18.3253 7.88479 18.0967 7.86 17.85L7.827 17.517C7.04899 17.3244 6.30434 17.0159 5.618 16.602L5.359 16.814C5.16707 16.9709 4.9237 17.051 4.6761 17.0386C4.42849 17.0262 4.19432 16.9223 4.019 16.747L2.753 15.48C2.57772 15.3047 2.47381 15.0705 2.46143 14.8229C2.44905 14.5753 2.52908 14.3319 2.686 14.14L2.898 13.88C2.48416 13.194 2.17572 12.4497 1.983 11.672L1.65 11.64C1.40334 11.6152 1.17467 11.4997 1.00838 11.3158C0.842077 11.132 0.749997 10.8929 0.75 10.645V8.855C0.749997 8.60709 0.842077 8.36802 1.00838 8.18417C1.17467 8.00032 1.40334 7.88479 1.65 7.86L1.983 7.827C2.17562 7.04899 2.48406 6.30434 2.898 5.618L2.686 5.359C2.52908 5.16707 2.44905 4.9237 2.46143 4.6761C2.47381 4.42849 2.57772 4.19432 2.753 4.019L4.02 2.753C4.19532 2.57772 4.42949 2.47381 4.6771 2.46143C4.9247 2.44905 5.16807 2.52908 5.36 2.686L5.62 2.898C6.30603 2.48416 7.05033 2.17572 7.828 1.983L7.86 1.65Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.5178 7.98223C11.9866 8.45107 12.25 9.08696 12.25 9.75C12.25 10.413 11.9866 11.0489 11.5178 11.5178C11.0489 11.9866 10.413 12.25 9.75 12.25C9.08696 12.25 8.45107 11.9866 7.98223 11.5178C7.51339 11.0489 7.25 10.413 7.25 9.75C7.25 9.08696 7.51339 8.45107 7.98223 7.98223C8.45107 7.51339 9.08696 7.25 9.75 7.25C10.413 7.25 11.0489 7.51339 11.5178 7.98223Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">PRECISO MELHORAR</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Tenho um produto, processo produtivo ou operação que precisa evoluir em qualidade, custo ou eficiência.
+            </p>
+          </div>
+          <div class="pt-6">
+            <button data-moment="Preciso Melhorar" class="diagnostico-action-btn w-full inline-flex items-center justify-between text-sm font-extrabold text-purple-700 hover:text-purple-900 group">
+              <span>Encontrar uma solução</span>
+              <i class="ri-arrow-right-line text-lg group-hover:translate-x-1 transition"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Adequar -->
+        <div class="mult-card p-8 flex flex-col justify-between hover:border-purple-400">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold">
+              <svg class="w-7 h-7" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.9641 1.8885L7.96297 1.88946C7.40704 2.38445 6.7001 2.67795 5.95696 2.72046C5.19496 2.78146 4.81396 2.81246 4.49696 2.92446C4.13443 3.05263 3.80512 3.26021 3.53314 3.53202C3.26115 3.80384 3.05336 4.13301 2.92496 4.49546C2.81296 4.81346 2.78196 5.19446 2.72096 5.95546C2.65896 6.73946 2.40996 7.35146 1.88996 7.96246L1.889 7.96359C1.39464 8.54384 1.14687 8.83466 1.00196 9.13846C0.836259 9.48536 0.750173 9.86491 0.75 10.2494C0.749827 10.6338 0.835572 11.0134 1.00096 11.3605C1.14696 11.6645 1.39496 11.9555 1.89096 12.5365C2.38595 13.0924 2.67845 13.7993 2.72096 14.5425C2.78196 15.3045 2.81296 15.6855 2.92496 16.0025C3.05313 16.365 3.26071 16.6943 3.53252 16.9663C3.80434 17.2383 4.13351 17.4461 4.49596 17.5745C4.81396 17.6865 5.19496 17.7175 5.95596 17.7785C6.69957 17.821 7.40692 18.1139 7.96297 18.6095L7.96405 18.6104C8.54433 19.1048 8.83515 19.3526 9.13896 19.4975C9.48594 19.663 9.86552 19.7489 10.25 19.7489C10.6344 19.7489 11.014 19.663 11.361 19.4975C11.665 19.3525 11.956 19.1045 12.537 18.6085C13.136 18.0985 13.743 17.8415 14.543 17.7785C15.305 17.7175 15.686 17.6865 16.003 17.5745C16.3655 17.4463 16.6948 17.2387 16.9668 16.9669C17.2388 16.6951 17.4466 16.3659 17.575 16.0035C17.687 15.6855 17.718 15.3045 17.779 14.5435C17.8215 13.7999 18.1144 13.0925 18.61 12.5365L18.6109 12.5354C19.1053 11.9551 19.3531 11.6643 19.498 11.3605C19.834 10.6585 19.834 9.84146 19.498 9.13846C19.353 8.83446 19.105 8.54346 18.609 7.96246C18.099 7.36346 17.842 6.75646 17.779 5.95646C17.718 5.19446 17.687 4.81346 17.575 4.49646C17.316 3.76146 16.738 3.18446 16.004 2.92446C15.686 2.81246 15.305 2.78146 14.544 2.72046C13.744 2.65746 13.136 2.39946 12.537 1.88946L12.5358 1.88849C11.9556 1.39414 11.6648 1.14637 11.361 1.00146C11.014 0.835915 10.6344 0.75 10.25 0.75C9.86552 0.75 9.48594 0.835915 9.13896 1.00146C8.83516 1.14637 8.54434 1.39414 7.9641 1.8885Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.91699 10.8825L8.42199 12.6035C8.52103 12.7168 8.64437 12.8063 8.78282 12.8653C8.92128 12.9244 9.07126 12.9514 9.22161 12.9443C9.37195 12.9373 9.51877 12.8965 9.65112 12.8248C9.78347 12.7531 9.89794 12.6525 9.98599 12.5305L13.583 7.54946" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">PRECISO ADEQUAR</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Preciso atender requisitos regulatórios, normas de segurança do trabalho (SST) ou conformidades ambientais/ESG.
+            </p>
+          </div>
+          <div class="pt-6">
+            <button data-moment="Preciso Adequar" class="diagnostico-action-btn w-full inline-flex items-center justify-between text-sm font-extrabold text-purple-700 hover:text-purple-900 group">
+              <span>Falar com uma especialista</span>
+              <i class="ri-arrow-right-line text-lg group-hover:translate-x-1 transition"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 4: SOLUÇÕES E ESPECIALISTAS (5 CARDS ESCUROS)
+       ======================================================================== -->
+  <section id="solucoes" class="py-24 bg-gradient-to-b from-slate-950 via-mult-dark to-slate-950 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-block text-xs font-extrabold tracking-widest text-purple-300 uppercase mb-2">
+          ESPECIALISTAS E SOLUÇÕES DE NEGÓCIOS
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          Da estratégia à implementação.
+        </h2>
+        <p class="text-slate-300 mt-4 text-base sm:text-lg">
+          Soluções completas e personalizadas para cada etapa e desafio do seu negócio.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        
+        <!-- Solução 1 -->
+        <div class="mult-card-dark p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center font-bold">
+              <svg class="w-6 h-6" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.9641 1.8885L7.96297 1.88946C7.40704 2.38445 6.7001 2.67795 5.95696 2.72046C5.19496 2.78146 4.81396 2.81246 4.49696 2.92446C4.13443 3.05263 3.80512 3.26021 3.53314 3.53202C3.26115 3.80384 3.05336 4.13301 2.92496 4.49546C2.81296 4.81346 2.78196 5.19446 2.72096 5.95546C2.65896 6.73946 2.40996 7.35146 1.88996 7.96246L1.889 7.96359C1.39464 8.54384 1.14687 8.83466 1.00196 9.13846C0.836259 9.48536 0.750173 9.86491 0.75 10.2494C0.749827 10.6338 0.835572 11.0134 1.00096 11.3605C1.14696 11.6645 1.39496 11.9555 1.89096 12.5365C2.38595 13.0924 2.67845 13.7993 2.72096 14.5425C2.78196 15.3045 2.81296 15.6855 2.92496 16.0025C3.05313 16.365 3.26071 16.6943 3.53252 16.9663C3.80434 17.2383 4.13351 17.4461 4.49596 17.5745C4.81396 17.6865 5.19496 17.7175 5.95596 17.7785C6.69957 17.821 7.40692 18.1139 7.96297 18.6095L7.96405 18.6104C8.54433 19.1048 8.83515 19.3526 9.13896 19.4975C9.48594 19.663 9.86552 19.7489 10.25 19.7489C10.6344 19.7489 11.014 19.663 11.361 19.4975C11.665 19.3525 11.956 19.1045 12.537 18.6085C13.136 18.0985 13.743 17.8415 14.543 17.7785C15.305 17.7175 15.686 17.6865 16.003 17.5745C16.3655 17.4463 16.6948 17.2387 16.9668 16.9669C17.2388 16.6951 17.4466 16.3659 17.575 16.0035C17.687 15.6855 17.718 15.3045 17.779 14.5435C17.8215 13.7999 18.1144 13.0925 18.61 12.5365L18.6109 12.5354C19.1053 11.9551 19.3531 11.6643 19.498 11.3605C19.834 10.6585 19.834 9.84146 19.498 9.13846C19.353 8.83446 19.105 8.54346 18.609 7.96246C18.099 7.36346 17.842 6.75646 17.779 5.95646C17.718 5.19446 17.687 4.81346 17.575 4.49646C17.316 3.76146 16.738 3.18446 16.004 2.92446C15.686 2.81246 15.305 2.78146 14.544 2.72046C13.744 2.65746 13.136 2.39946 12.537 1.88946L12.5358 1.88849C11.9556 1.39414 11.6648 1.14637 11.361 1.00146C11.014 0.835915 10.6344 0.75 10.25 0.75C9.86552 0.75 9.48594 0.835915 9.13896 1.00146C8.83516 1.14637 8.54434 1.39414 7.9641 1.8885Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.91699 10.8825L8.42199 12.6035C8.52103 12.7168 8.64437 12.8063 8.78282 12.8653C8.92128 12.9244 9.07126 12.9514 9.22161 12.9443C9.37195 12.9373 9.51877 12.8965 9.65112 12.8248C9.78347 12.7531 9.89794 12.6525 9.98599 12.5305L13.583 7.54946" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-extrabold tracking-wide uppercase text-white">
+              QUALIDADE & INOVAÇÃO
+            </h3>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-white/10">
+              <li class="flex items-center gap-2"><i class="ri-check-line text-purple-400"></i> Desenvolvimento de produtos</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-purple-400"></i> P&D e inovação aplicada</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-purple-400"></i> Matérias-primas e avaliações</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-purple-400"></i> Documentação regulatória</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-purple-400"></i> Viabilidade e legislação</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <span class="block w-full py-2 text-center text-xs font-bold uppercase tracking-wider rounded-xl bg-purple-600/30 text-purple-200 border border-purple-500/30">
+              Da ideia ao mercado
+            </span>
+          </div>
+        </div>
+
+        <!-- Solução 2 -->
+        <div class="mult-card-dark p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center font-bold">
+              <svg class="w-6 h-6" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.00781 8.99292L7.04181 10.1739C7.13681 10.2829 7.30781 10.2739 7.39181 10.1579L9.49181 7.25092" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.21702 18.5709C7.37023 18.6875 7.55747 18.7507 7.75002 18.7507C7.94257 18.7507 8.1298 18.6875 8.28302 18.5709C9.91802 17.3439 14.75 13.3369 14.75 8.76692V3.83692C14.751 3.70975 14.7049 3.58672 14.6205 3.4916C14.5361 3.39648 14.4194 3.33602 14.293 3.32192C12.2907 3.11683 10.3716 2.41343 8.71102 1.27592L8.10102 0.858924C7.99771 0.787977 7.87534 0.75 7.75002 0.75C7.6247 0.75 7.50232 0.787977 7.39902 0.858924L6.78902 1.27592C5.12843 2.41343 3.20936 3.11683 1.20702 3.32192C1.08063 3.33602 0.963952 3.39648 0.879544 3.4916C0.795135 3.58672 0.748986 3.70975 0.750017 3.83692V8.76692C0.750017 13.3369 5.58202 17.3439 7.21702 18.5689" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-extrabold tracking-wide uppercase text-white">
+              SEGURANÇA DO TRABALHO
+            </h3>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-white/10">
+              <li class="flex items-center gap-2"><i class="ri-check-line text-indigo-400"></i> Gestão técnica de EPIs</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-indigo-400"></i> Soluções tecnológicas SST</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-indigo-400"></i> Auditorias e treinamentos</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-indigo-400"></i> Gestão de riscos ocupacionais</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-indigo-400"></i> Conformidade legal (NRs)</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <span class="block w-full py-2 text-center text-xs font-bold uppercase tracking-wider rounded-xl bg-indigo-600/30 text-indigo-200 border border-indigo-500/30">
+              Protegemos pessoas
+            </span>
+          </div>
+        </div>
+
+        <!-- Solução 3 -->
+        <div class="mult-card-dark p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold">
+              <svg class="w-6 h-6" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.723 13.7783C10.348 18.3543 16.449 12.2533 15.686 0.814261C4.248 0.0522608 -1.852 6.15326 2.723 13.7783ZM2.723 13.7783L0.75 15.7503M2.723 13.7783L6.85 9.65026" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-extrabold tracking-wide uppercase text-white">
+              MEIO AMBIENTE & ESG
+            </h3>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-white/10">
+              <li class="flex items-center gap-2"><i class="ri-check-line text-emerald-400"></i> Inventário GEE (Carbono)</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-emerald-400"></i> Projetos de neutralização</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-emerald-400"></i> Economia circular</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-emerald-400"></i> Sustentabilidade corporativa</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-emerald-400"></i> Auditorias ambientais</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <span class="block w-full py-2 text-center text-xs font-bold uppercase tracking-wider rounded-xl bg-emerald-600/30 text-emerald-200 border border-emerald-500/30">
+              Valor para o futuro
+            </span>
+          </div>
+        </div>
+
+        <!-- Solução 4 -->
+        <div class="mult-card-dark p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-300 flex items-center justify-center font-bold">
+              <svg class="w-6 h-6" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.75 15.7616C14.75 14.1046 12.511 12.7616 9.75 12.7616C6.989 12.7616 4.75 14.1046 4.75 15.7616M18.75 12.7616C18.75 11.5316 17.516 10.4746 15.75 10.0116M0.75 12.7616C0.75 11.5316 1.984 10.4746 3.75 10.0116M9.75 9.76162C8.95435 9.76162 8.19129 9.44555 7.62868 8.88295C7.06607 8.32034 6.75 7.55727 6.75 6.76162C6.75 5.96597 7.06607 5.20291 7.62868 4.6403C8.19129 4.07769 8.95435 3.76162 9.75 3.76162C10.5456 3.76162 11.3087 4.07769 11.8713 4.6403C12.4339 5.20291 12.75 5.96597 12.75 6.76162C12.75 7.55727 12.4339 8.32034 11.8713 8.88295C11.3087 9.44555 10.5456 9.76162 9.75 9.76162Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-extrabold tracking-wide uppercase text-white">
+              RESPONSABILIDADE SOCIAL
+            </h3>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-white/10">
+              <li class="flex items-center gap-2"><i class="ri-check-line text-sky-400"></i> Indicadores sociais e impacto</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-sky-400"></i> Projetos comunitários</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-sky-400"></i> Certificações éticas</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-sky-400"></i> Requisitos multinacionais</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-sky-400"></i> Estratégias de governança</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <span class="block w-full py-2 text-center text-xs font-bold uppercase tracking-wider rounded-xl bg-sky-600/30 text-sky-200 border border-sky-500/30">
+              Relações mais fortes
+            </span>
+          </div>
+        </div>
+
+        <!-- Solução 5 -->
+        <div class="mult-card-dark p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-rose-500/20 text-rose-300 flex items-center justify-center font-bold">
+              <svg class="w-6 h-6" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.2 0C14.1548 0 15.0705 0.379285 15.7456 1.05442C16.4207 1.72955 16.8 2.64522 16.8 3.6V13.2C16.8 14.1548 16.4207 15.0705 15.7456 15.7456C15.0705 16.4207 14.1548 16.8 13.2 16.8H3.6C2.64522 16.8 1.72955 16.4207 1.05442 15.7456C0.379285 15.0705 0 14.1548 0 13.2V3.6C0 2.64522 0.379285 1.72955 1.05442 1.05442C1.72955 0.379285 2.64522 0 3.6 0H13.2ZM3.6 1.2C2.96348 1.2 2.35303 1.45286 1.90294 1.90294C1.45286 2.35303 1.2 2.96348 1.2 3.6V13.2C1.2 13.8365 1.45286 14.447 1.90294 14.8971C2.35303 15.3471 2.96348 15.6 3.6 15.6H13.2C13.8365 15.6 14.447 15.3471 14.8971 14.8971C15.3471 14.447 15.6 13.8365 15.6 13.2V3.6C15.6 2.96348 15.3471 2.35303 14.8971 1.90294C14.447 1.45286 13.8365 1.2 13.2 1.2H3.6ZM6.6048 3.6C6.72778 3.60097 6.84749 3.6397 6.94773 3.71096C7.04796 3.78222 7.12388 3.88256 7.1652 3.9984L9.6924 11.0748L10.8636 8.7312C10.9135 8.63166 10.9901 8.54797 11.0848 8.48948C11.1795 8.43098 11.2887 8.4 11.4 8.4H13.8C13.9591 8.4 14.1117 8.46321 14.2243 8.57574C14.3368 8.68826 14.4 8.84087 14.4 9C14.4 9.15913 14.3368 9.31174 14.2243 9.42426C14.1117 9.53679 13.9591 9.6 13.8 9.6H11.7708L10.1364 12.8688C10.0837 12.9739 10.0014 13.0612 9.8995 13.1199C9.79763 13.1786 9.68076 13.2061 9.56341 13.199C9.44606 13.1918 9.3334 13.1503 9.23942 13.0797C9.14544 13.009 9.07429 12.9123 9.0348 12.8016L6.588 5.9448L5.3628 9.2112C5.31977 9.32562 5.24281 9.42417 5.14223 9.49366C5.04165 9.56314 4.92225 9.60024 4.8 9.6H3C2.84087 9.6 2.68826 9.53679 2.57574 9.42426C2.46321 9.31174 2.4 9.15913 2.4 9C2.4 8.84087 2.46321 8.68826 2.57574 8.57574C2.68826 8.46321 2.84087 8.4 3 8.4H4.3836L6.0396 3.9888C6.08263 3.87438 6.15959 3.77583 6.26017 3.70634C6.36075 3.63686 6.48015 3.59976 6.6024 3.6" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="text-base font-extrabold tracking-wide uppercase text-white">
+              DIAGNÓSTICO & COMPLEXOS
+            </h3>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2 border-t border-white/10">
+              <li class="flex items-center gap-2"><i class="ri-check-line text-rose-400"></i> Análise multidisciplinar</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-rose-400"></i> Estudos de viabilidade</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-rose-400"></i> Soluções personalizadas</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-rose-400"></i> Conexão com doutores/P&D</li>
+              <li class="flex items-center gap-2"><i class="ri-check-line text-rose-400"></i> Resolução de gargalos</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <span class="block w-full py-2 text-center text-xs font-bold uppercase tracking-wider rounded-xl bg-rose-600/30 text-rose-200 border border-rose-500/30">
+              Desafios sob medida
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 5: COMO A MULT ATUA (CADEIA MOLECULAR DE INOVAÇÃO - OCULTO)
+       ======================================================================== -->
+  <section id="como-atuamos" class="hidden py-24 bg-white relative overflow-hidden molecular-bg-pattern border-y border-purple-100/80" style="display: none;" aria-hidden="true">
+    
+    <!-- Ambient Molecular Glows -->
+    <div class="absolute top-1/3 left-10 w-80 h-80 bg-purple-200/40 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/80 border border-purple-200 text-xs font-extrabold uppercase tracking-widest text-purple-900 shadow-2xs">
+          <i class="ri-node-tree text-purple-700"></i>
+          METODOLOGIA CIENTÍFICA &amp; ENGENHARIA
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 mt-3 tracking-tight leading-[1.15]">
+          Você traz o desafio.<br class="hidden sm:inline" />
+          <span class="text-purple-800">Nós conectamos a cadeia de conhecimento.</span>
+        </h2>
+        <p class="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+          Uma reação estruturada em 5 fases contínuas, unindo diagnóstico preciso, síntese técnica multidisciplinar e entrega de resultados de alto impacto.
+        </p>
+      </div>
+
+      <!-- ====================================================================
+           DESKTOP: CADEIA MOLECULAR HORIZONTAL EM ZIGUE-ZAGUE (MD & LG)
+           ==================================================================== -->
+      <div class="hidden md:block relative pb-8">
+        
+        <!-- SVG Chemical Bond Connection Lines (Fundo conectando os 5 átomos) -->
+        <svg class="absolute top-20 left-0 w-full h-32 pointer-events-none select-none z-0" preserveAspectRatio="none" viewBox="0 0 1000 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="molecularBondGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#C084FC" stop-opacity="0.4" />
+              <stop offset="25%" stop-color="#7C3AED" stop-opacity="0.9" />
+              <stop offset="50%" stop-color="#4F46E5" stop-opacity="0.9" />
+              <stop offset="75%" stop-color="#9333EA" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#C084FC" stop-opacity="0.4" />
+            </linearGradient>
+            <filter id="bondGlow" x="-10%" y="-10%" width="120%" height="120%">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          
+          <!-- Linha Base Dupla de Ligação Covalente -->
+          <path d="M 100 60 L 300 20 L 500 95 L 700 20 L 900 60" stroke="url(#molecularBondGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#bondGlow)" />
+          <path d="M 100 60 L 300 20 L 500 95 L 700 20 L 900 60" stroke="#FAF5FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          
+          <!-- Linha de Pulso de Elétrons Animado -->
+          <path d="M 100 60 L 300 20 L 500 95 L 700 20 L 900 60" stroke="#E9D5FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="molecular-bond-pulse" />
+        </svg>
+
+        <!-- 5 Atomic Nodes & Cards Container -->
+        <div class="grid grid-cols-5 gap-4 lg:gap-6 relative z-10">
+          
+          <!-- Átomo 01: Diagnóstico (Mid Level) -->
+          <div class="flex flex-col items-center text-center space-y-4 pt-8 group">
+            <div class="relative flex items-center justify-center">
+              <!-- Órbita de Valência -->
+              <div class="absolute w-20 h-20 border border-dashed border-purple-400/60 rounded-full molecular-valence-ring pointer-events-none"></div>
+              <!-- Núcleo Atômico / Orbe -->
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-950 text-white flex items-center justify-center text-xl font-bold shadow-lg molecular-node-orb z-10">
+                <i class="ri-search-eye-line"></i>
+              </div>
+              <!-- Badge de Posição Atômica -->
+              <span class="absolute -bottom-2.5 px-2 py-0.5 rounded-full bg-white text-[10px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">01</span>
+            </div>
+            
+            <!-- Card Descritivo -->
+            <div class="w-full bg-white/95 backdrop-blur-sm p-4 rounded-2xl border border-purple-100/90 shadow-sm molecular-step-card space-y-2">
+              <span class="text-[10px] font-black text-purple-600 uppercase tracking-widest block">REAGENTE</span>
+              <h3 class="text-sm font-extrabold text-slate-950 uppercase tracking-tight">DIAGNÓSTICO</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Mapeamento preciso de variáveis, gargalos técnicos e escopo científico.</p>
+            </div>
+          </div>
+
+          <!-- Átomo 02: Conexão (Elevated / High Level) -->
+          <div class="flex flex-col items-center text-center space-y-4 pt-0 group">
+            <div class="relative flex items-center justify-center">
+              <!-- Órbita de Valência -->
+              <div class="absolute w-20 h-20 border border-dashed border-purple-400/60 rounded-full molecular-valence-ring pointer-events-none" style="animation-duration: 18s; animation-direction: reverse;"></div>
+              <!-- Núcleo Atômico / Orbe -->
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-950 text-white flex items-center justify-center text-xl font-bold shadow-lg molecular-node-orb z-10">
+                <i class="ri-team-line"></i>
+              </div>
+              <!-- Badge de Posição Atômica -->
+              <span class="absolute -bottom-2.5 px-2 py-0.5 rounded-full bg-white text-[10px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">02</span>
+            </div>
+            
+            <!-- Card Descritivo -->
+            <div class="w-full bg-white/95 backdrop-blur-sm p-4 rounded-2xl border border-purple-100/90 shadow-sm molecular-step-card space-y-2">
+              <span class="text-[10px] font-black text-purple-600 uppercase tracking-widest block">FUSÃO TÉCNICA</span>
+              <h3 class="text-sm font-extrabold text-slate-950 uppercase tracking-tight">CONEXÃO</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Alocação sob medida de doutoras, engenheiras e especialistas de ponta.</p>
+            </div>
+          </div>
+
+          <!-- Átomo 03: Desenvolvimento (Lower Level) -->
+          <div class="flex flex-col items-center text-center space-y-4 pt-14 group">
+            <div class="relative flex items-center justify-center">
+              <!-- Órbita de Valência -->
+              <div class="absolute w-20 h-20 border border-dashed border-purple-400/60 rounded-full molecular-valence-ring pointer-events-none" style="animation-duration: 12s;"></div>
+              <!-- Núcleo Atômico / Orbe -->
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-950 text-white flex items-center justify-center text-xl font-bold shadow-lg molecular-node-orb z-10">
+                <i class="ri-flask-line"></i>
+              </div>
+              <!-- Badge de Posição Atômica -->
+              <span class="absolute -bottom-2.5 px-2 py-0.5 rounded-full bg-white text-[10px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">03</span>
+            </div>
+            
+            <!-- Card Descritivo -->
+            <div class="w-full bg-white/95 backdrop-blur-sm p-4 rounded-2xl border border-purple-100/90 shadow-sm molecular-step-card space-y-2">
+              <span class="text-[10px] font-black text-purple-600 uppercase tracking-widest block">SÍNTESE &amp; P&amp;D</span>
+              <h3 class="text-sm font-extrabold text-slate-950 uppercase tracking-tight">DESENVOLVIMENTO</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Formulação, prototipagem e validação com metodologia e rigor científico.</p>
+            </div>
+          </div>
+
+          <!-- Átomo 04: Implementação (Elevated / High Level) -->
+          <div class="flex flex-col items-center text-center space-y-4 pt-0 group">
+            <div class="relative flex items-center justify-center">
+              <!-- Órbita de Valência -->
+              <div class="absolute w-20 h-20 border border-dashed border-purple-400/60 rounded-full molecular-valence-ring pointer-events-none" style="animation-duration: 16s; animation-direction: reverse;"></div>
+              <!-- Núcleo Atômico / Orbe -->
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-950 text-white flex items-center justify-center text-xl font-bold shadow-lg molecular-node-orb z-10">
+                <i class="ri-settings-4-line"></i>
+              </div>
+              <!-- Badge de Posição Atômica -->
+              <span class="absolute -bottom-2.5 px-2 py-0.5 rounded-full bg-white text-[10px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">04</span>
+            </div>
+            
+            <!-- Card Descritivo -->
+            <div class="w-full bg-white/95 backdrop-blur-sm p-4 rounded-2xl border border-purple-100/90 shadow-sm molecular-step-card space-y-2">
+              <span class="text-[10px] font-black text-purple-600 uppercase tracking-widest block">CATALISADOR</span>
+              <h3 class="text-sm font-extrabold text-slate-950 uppercase tracking-tight">IMPLEMENTAÇÃO</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Escala industrial, conformidade regulatória e acompanhamento em campo.</p>
+            </div>
+          </div>
+
+          <!-- Átomo 05: Resultados (Mid Level) -->
+          <div class="flex flex-col items-center text-center space-y-4 pt-8 group">
+            <div class="relative flex items-center justify-center">
+              <!-- Órbita de Valência -->
+              <div class="absolute w-20 h-20 border border-dashed border-purple-400/60 rounded-full molecular-valence-ring pointer-events-none"></div>
+              <!-- Núcleo Atômico / Orbe -->
+              <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-950 text-white flex items-center justify-center text-xl font-bold shadow-lg molecular-node-orb z-10">
+                <i class="ri-line-chart-line"></i>
+              </div>
+              <!-- Badge de Posição Atômica -->
+              <span class="absolute -bottom-2.5 px-2 py-0.5 rounded-full bg-white text-[10px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">05</span>
+            </div>
+            
+            <!-- Card Descritivo -->
+            <div class="w-full bg-white/95 backdrop-blur-sm p-4 rounded-2xl border border-purple-100/90 shadow-sm molecular-step-card space-y-2">
+              <span class="text-[10px] font-black text-purple-600 uppercase tracking-widest block">SOLUÇÃO ESTÁVEL</span>
+              <h3 class="text-sm font-extrabold text-slate-950 uppercase tracking-tight">RESULTADOS</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Entrega validada, transferência técnica e impacto econômico mensurável.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ====================================================================
+           MOBILE / TABLET: FITA MOLECULAR VERTICAL (< MD)
+           ==================================================================== -->
+      <div class="md:hidden relative space-y-6 pl-4 sm:pl-8">
+        
+        <!-- Linha Central Vertical de Ligação Molecular -->
+        <div class="absolute left-10 sm:left-14 top-6 bottom-6 w-1 bg-gradient-to-b from-purple-400 via-purple-600 to-indigo-800 rounded-full"></div>
+
+        <!-- Mobile Step 01 -->
+        <div class="flex items-start gap-4 sm:gap-6 relative">
+          <div class="relative shrink-0 flex items-center justify-center mt-1">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-indigo-950 text-white flex items-center justify-center text-lg font-bold shadow-md z-10">
+              <i class="ri-search-eye-line"></i>
+            </div>
+            <span class="absolute -bottom-2 px-1.5 py-0.2 rounded-full bg-white text-[9px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">01</span>
+          </div>
+          <div class="bg-white p-4 rounded-2xl border border-purple-100/90 shadow-xs flex-1 space-y-1">
+            <span class="text-[10px] font-black text-purple-600 uppercase tracking-wider block">REAGENTE</span>
+            <h3 class="text-sm font-extrabold text-slate-950">DIAGNÓSTICO</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Mapeamento preciso de variáveis, gargalos técnicos e escopo científico.</p>
+          </div>
+        </div>
+
+        <!-- Mobile Step 02 -->
+        <div class="flex items-start gap-4 sm:gap-6 relative">
+          <div class="relative shrink-0 flex items-center justify-center mt-1">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-indigo-950 text-white flex items-center justify-center text-lg font-bold shadow-md z-10">
+              <i class="ri-team-line"></i>
+            </div>
+            <span class="absolute -bottom-2 px-1.5 py-0.2 rounded-full bg-white text-[9px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">02</span>
+          </div>
+          <div class="bg-white p-4 rounded-2xl border border-purple-100/90 shadow-xs flex-1 space-y-1">
+            <span class="text-[10px] font-black text-purple-600 uppercase tracking-wider block">FUSÃO TÉCNICA</span>
+            <h3 class="text-sm font-extrabold text-slate-950">CONEXÃO</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Alocação sob medida de doutoras, engenheiras e especialistas de ponta.</p>
+          </div>
+        </div>
+
+        <!-- Mobile Step 03 -->
+        <div class="flex items-start gap-4 sm:gap-6 relative">
+          <div class="relative shrink-0 flex items-center justify-center mt-1">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-indigo-950 text-white flex items-center justify-center text-lg font-bold shadow-md z-10">
+              <i class="ri-flask-line"></i>
+            </div>
+            <span class="absolute -bottom-2 px-1.5 py-0.2 rounded-full bg-white text-[9px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">03</span>
+          </div>
+          <div class="bg-white p-4 rounded-2xl border border-purple-100/90 shadow-xs flex-1 space-y-1">
+            <span class="text-[10px] font-black text-purple-600 uppercase tracking-wider block">SÍNTESE &amp; P&amp;D</span>
+            <h3 class="text-sm font-extrabold text-slate-950">DESENVOLVIMENTO</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Formulação, prototipagem e validação com metodologia e rigor científico.</p>
+          </div>
+        </div>
+
+        <!-- Mobile Step 04 -->
+        <div class="flex items-start gap-4 sm:gap-6 relative">
+          <div class="relative shrink-0 flex items-center justify-center mt-1">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-indigo-950 text-white flex items-center justify-center text-lg font-bold shadow-md z-10">
+              <i class="ri-settings-4-line"></i>
+            </div>
+            <span class="absolute -bottom-2 px-1.5 py-0.2 rounded-full bg-white text-[9px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">04</span>
+          </div>
+          <div class="bg-white p-4 rounded-2xl border border-purple-100/90 shadow-xs flex-1 space-y-1">
+            <span class="text-[10px] font-black text-purple-600 uppercase tracking-wider block">CATALISADOR</span>
+            <h3 class="text-sm font-extrabold text-slate-950">IMPLEMENTAÇÃO</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Escala industrial, conformidade regulatória e acompanhamento em campo.</p>
+          </div>
+        </div>
+
+        <!-- Mobile Step 05 -->
+        <div class="flex items-start gap-4 sm:gap-6 relative">
+          <div class="relative shrink-0 flex items-center justify-center mt-1">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-indigo-950 text-white flex items-center justify-center text-lg font-bold shadow-md z-10">
+              <i class="ri-line-chart-line"></i>
+            </div>
+            <span class="absolute -bottom-2 px-1.5 py-0.2 rounded-full bg-white text-[9px] font-black text-purple-900 border border-purple-200 shadow-xs z-20">05</span>
+          </div>
+          <div class="bg-white p-4 rounded-2xl border border-purple-100/90 shadow-xs flex-1 space-y-1">
+            <span class="text-[10px] font-black text-purple-600 uppercase tracking-wider block">SOLUÇÃO ESTÁVEL</span>
+            <h3 class="text-sm font-extrabold text-slate-950">RESULTADOS</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Entrega validada, transferência técnica e impacto econômico mensurável.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 6: PROJETOS EM DESTAQUE (DYNAMIC / EDITABLE)
+       ======================================================================== -->
+  <section id="projetos" class="py-20 bg-mult-lilac border-y border-purple-100/70 relative overflow-hidden">
+    <!-- Ambient lighting glow -->
+    <div class="absolute top-1/2 right-4 -translate-y-1/2 w-96 h-96 bg-purple-300/25 rounded-full blur-[110px] pointer-events-none"></div>
+    <div class="absolute bottom-0 left-4 w-80 h-80 bg-sky-200/20 rounded-full blur-[100px] pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header (Left-aligned & Cohesive with Card Grid) -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="max-w-2xl">
+          <span class="badge-eyebrow">PROJETO EM DESTAQUE</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-950 mt-2 tracking-tight">
+            Casos reais que transformam indústrias.
+          </h2>
+        </div>
+        <p class="text-slate-600 text-sm sm:text-base max-w-md leading-relaxed">
+          A união entre rigor científico, formulações inovadoras e visão sustentável para criar novas categorias de mercado.
+        </p>
+      </div>
+
+      <!-- Projects Carousel Container -->
+      <div class="projects-carousel-wrapper relative" id="projectsCarouselWrapper">
+        <div id="projectsCarousel" class="projects-carousel overflow-hidden relative rounded-3xl" aria-label="Projetos em destaque">
+          <!-- Sliding Track -->
+          <div id="projectsTrack" class="projects-track flex w-full">
+            <div id="projectsContainer" class="w-full flex-shrink-0">
+              <div class="mult-card p-12 text-center text-slate-500">
+                <i class="ri-loader-4-line animate-spin text-3xl text-purple-600 block mb-2"></i>
+                Carregando projetos em destaque...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barra de Navegação e Controles Inferior (Dots + Setas) -->
+        <div id="projectsControls" class="projects-controls flex items-center justify-center gap-4 mt-8 select-none" style="display: none;">
+          <button type="button" class="projects-nav-btn projects-nav-prev" id="projectsPrevBtn" aria-label="Projeto anterior">
+            <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+          </button>
+          <div class="projects-dots flex items-center gap-2" id="projectsDots" role="tablist" aria-label="Indicadores de projetos">
+            <!-- Dots dinâmicos gerados via js/site.js -->
+          </div>
+          <button type="button" class="projects-nav-btn projects-nav-next" id="projectsNextBtn" aria-label="Próximo projeto">
+            <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 8: NOSSAS MULTIPLICADORAS / EQUIPE (CARROSSEL 3D IMERSIVO)
+       ======================================================================== -->
+  <section id="equipe" class="py-24 relative overflow-hidden bg-gradient-to-b from-[#1D0B44] via-[#150634] to-[#12042B] text-white">
+    <!-- Ambient Light Glow & Subtle Grid Texture -->
+    <div class="absolute inset-0 brand-bg-grid opacity-20 pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-purple-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-400/30 text-xs font-extrabold  tracking-widest text-purple-300">
+          <i class="ri-sparkling-fill text-purple-400"></i>
+          NOSSAS MULTIPLICADORAS
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">
+          Mulheres que multiplicam conhecimento.
+        </h2>
+        <p class="text-purple-200/80 mt-4 text-base sm:text-lg leading-relaxed">
+          Uma rede de especialistas com sólida experiência técnica, unidas pelo propósito de transformar inovação científica em soluções práticas de alto impacto.
+        </p>
+      </div>
+
+      <!-- 3D Carousel Viewport Container -->
+      <div id="team3DCarouselContainer" class="relative w-full max-w-6xl mx-auto h-[480px] sm:h-[520px] flex items-center justify-center select-none overflow-hidden" style="perspective: 1200px;">
+        <div id="carouselTrack" class="relative w-full h-full flex items-center justify-center" style="transform-style: preserve-3d;">
+          <!-- Dynamically Injected by js/site.js -->
+          <div class="text-purple-300 text-sm flex items-center gap-2">
+            <i class="ri-loader-4-line animate-spin text-xl"></i> Carregando especialistas...
+          </div>
+        </div>
+      </div>
+
+      <!-- Micro Helper / Navigation hint -->
+      <div class="flex items-center justify-center gap-3 mt-8 text-xs text-purple-300/60">
+        <i class="ri-cursor-line"></i>
+        <span>Passe o mouse para pausar ou clique nos cards laterais para focar</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 9: REDE DE ESPECIALISTAS (CHAMADA SECUNDÁRIA & CLEAN)
+       ======================================================================== -->
+  <section id="multiplicador" class="relative overflow-hidden bg-[#E2D3F5] border-y border-purple-200/70 py-14 lg:py-20 flex items-center">
+    
+    <!-- Background Image: Especialistas integradas fluidamente ao ambiente da section -->
+    <div class="absolute inset-0 z-0 pointer-events-none select-none">
+      <img 
+        src="assets/img/multiplicadoras-banner-clean.jpg" 
+        alt="Rede de Especialistas Mult Engenharia" 
+        class="w-full h-full object-cover object-[78%_center] lg:object-right"
+      />
+      <!-- Gradiente para fusão perfeita da imagem e garantia de legibilidade total -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#E2D3F5] via-[#E2D3F5]/95 via-45% to-transparent w-full lg:w-7/12"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#E2D3F5] via-[#E2D3F5]/85 via-50% to-transparent lg:hidden"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="max-w-xl lg:max-w-2xl space-y-5">
+        
+        <!-- Eyebrow Badge -->
+        <div>
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-purple-300/80 text-xs font-extrabold uppercase tracking-widest text-purple-950 shadow-sm">
+            <i class="ri-team-line text-purple-700"></i>
+            REDE DE ESPECIALISTAS &amp; BANCO DE TALENTOS
+          </span>
+        </div>
+
+        <!-- Título Institucional e Convidativo -->
+        <div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight leading-[1.16]">
+            Faça parte da nossa rede de <span class="text-purple-900  decoration-purple-400/40 decoration-wavy decoration-2">especialistas técnicas</span>.
+          </h2>
+        </div>
+
+        <!-- Texto Descritivo em Tom de Convite / Parceria -->
+        <p class="text-slate-800 text-base sm:text-lg leading-relaxed max-w-xl">
+          Buscamos engenheiras, cientistas e consultoras de excelência para atuar em projetos estratégicos de inovação, conformidade regulatória e sustentabilidade em todo o país. Integre nossa equipe multidisciplinar e atue em desafios de alto impacto com total autonomia.
+        </p>
+
+        <!-- Pílulas de Benefícios Institucionais -->
+        <div class="flex flex-wrap items-center gap-2.5 pt-1">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/75 backdrop-blur-sm border border-purple-200/80 text-xs font-bold text-slate-800 shadow-xs">
+            <i class="ri-checkbox-circle-fill text-purple-700"></i> Projetos Estratégicos Nacionais
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/75 backdrop-blur-sm border border-purple-200/80 text-xs font-bold text-slate-800 shadow-xs">
+            <i class="ri-checkbox-circle-fill text-purple-700"></i> Atuação Flexível e Remota
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/75 backdrop-blur-sm border border-purple-200/80 text-xs font-bold text-slate-800 shadow-xs">
+            <i class="ri-checkbox-circle-fill text-purple-700"></i> Metodologia Multidisciplinar
+          </span>
+        </div>
+
+        <!-- CTA Direto para o Formulário -->
+        <div class="pt-2">
+          <a 
+            href="#contato" 
+            onclick="if(document.getElementById('formMoment')){document.getElementById('formMoment').value='Quero Ser Multiplicador';}" 
+            class="btn-mult-primary bg-purple-900 hover:bg-purple-800 text-white shadow-xl shadow-purple-950/20 px-8 py-3.5 text-sm sm:text-base font-extrabold rounded-full inline-flex items-center gap-3 group transition-all"
+          >
+            <span>CANDIDATE-SE À REDE MULT</span>
+            <i class="ri-arrow-right-line group-hover:translate-x-1.5 transition-transform text-lg"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 10: FORMULÁRIO DE CONTATO / CONVERSÃO
+       ======================================================================== -->
+  <section id="contato" class="py-24 bg-mult-lilac relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-4xl mx-auto">
+        
+        <div class="text-center mb-12">
+          <span class="badge-eyebrow">FALE COM A MULT</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-950 mt-2">
+            Vamos impulsionar o seu negócio?
+          </h2>
+          <p class="text-slate-600 mt-3 text-base sm:text-lg">
+            Conte seu projeto para a Mult. Nossa equipe técnica avaliará sua necessidade e conectará os especialistas certos para construir a solução.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-xl border border-purple-100 p-8 sm:p-12">
+          
+          <!-- Alert feedback box -->
+          <div id="formAlert" class="hidden"></div>
+
+          <form id="contactForm" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <div>
+                <label for="formName" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                  Nome Completo *
+                </label>
+                <input 
+                  type="text" 
+                  id="formName" 
+                  name="name" 
+                  required 
+                  placeholder="Ex: Dra. Mariana Silva" 
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 text-slate-900 outline-none transition text-sm font-medium"
+                />
+              </div>
+
+              <div>
+                <label for="formEmail" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                  E-mail Corporativo *
+                </label>
+                <input 
+                  type="email" 
+                  id="formEmail" 
+                  name="email" 
+                  required 
+                  placeholder="mariana@empresa.com.br" 
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 text-slate-900 outline-none transition text-sm font-medium"
+                />
+              </div>
+
+              <div>
+                <label for="formPhone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                  WhatsApp / Telefone
+                </label>
+                <input 
+                  type="tel" 
+                  id="formPhone" 
+                  name="phone" 
+                  placeholder="(47) 9 9999-9999" 
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 text-slate-900 outline-none transition text-sm font-medium"
+                />
+              </div>
+
+              <div>
+                <label for="formCompany" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                  Nome da Empresa / Segmento
+                </label>
+                <input 
+                  type="text" 
+                  id="formCompany" 
+                  name="company" 
+                  placeholder="Ex: BioTech Alimentos" 
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 text-slate-900 outline-none transition text-sm font-medium"
+                />
+              </div>
+
+            </div>
+
+            <div>
+              <label for="formMoment" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                Em que momento está o seu projeto?
+              </label>
+              <select 
+                id="formMoment" 
+                name="project_moment" 
+                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 text-slate-900 outline-none transition text-sm font-medium bg-white"
+              >
+                <option value="Quero Criar">Quero Criar (Tenho uma ideia de novo produto)</option>
+                <option value="Preciso Melhorar">Preciso Melhorar (Tenho um produto/processo que precisa evoluir)</option>
+                <option value="Preciso Adequar">Preciso Adequar (Atender requisitos técnicos/regulatórios/SST)</option>
+                <option value="Quero Ser Multiplicador">Quero Ser Multiplicador (Candidatura de especialista)</option>
+                <option value="Outro">Outro desafio de engenharia</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="formMessage" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                Fale sobre o seu projeto ou desafio técnico *
+              </label>
+              <textarea 
+                id="formMessage" 
+                name="message" 
+                rows="4" 
+                required 
+                placeholder="Descreva brevemente seus objetivos, prazos ou principais dúvidas..."
+                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple-600 focus:ring-2 focus:ring-purple-600/20 text-slate-900 outline-none transition text-sm font-medium"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              id="formSubmitBtn" 
+              class="btn-mult-primary w-full py-4 text-base tracking-wide"
+            >
+              <span>FALE COM UMA ESPECIALISTA</span>
+              <i class="ri-arrow-right-line"></i>
+            </button>
+
+          </form>
+
+        </div>
+
+        <!-- 3 Trust Badges -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 text-center">
+          <div class="flex items-center justify-center gap-2.5 text-slate-600 text-sm font-semibold">
+            <i class="ri-customer-service-2-line text-purple-700 text-xl"></i>
+            <span>Atendimento personalizado</span>
+          </div>
+          <div class="flex items-center justify-center gap-2.5 text-slate-600 text-sm font-semibold">
+            <i class="ri-shield-keyhole-line text-purple-700 text-xl"></i>
+            <span>Confidencialidade de dados</span>
+          </div>
+          <div class="flex items-center justify-center gap-2.5 text-slate-600 text-sm font-semibold">
+            <i class="ri-target-line text-purple-700 text-xl"></i>
+            <span>Foco em resultados reais</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="bg-mult-navy text-white pt-16 pb-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Logo & Description -->
+        <div class="md:col-span-5 space-y-4">
+          <img src="assets/logo/mult-logo-white.png" alt="Mult Serviços de Engenharia" class="h-10 w-auto object-contain" />
+          <p class="font-script text-purple-300 text-xl">
+            Conhecimento que multiplica resultados.
+          </p>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Hub de soluções técnicas integrando engenharia, inovação científica, qualidade, segurança ocupacional e ESG.
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-purple-300">Navegação</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="#quem-somos" class="hover:text-white transition">Quem Somos</a></li>
+            <li><a href="#solucoes" class="hover:text-white transition">Soluções</a></li>
+            <li style="display: none;"><a href="#como-atuamos" class="hover:text-white transition">Como Atuamos</a></li>
+            <li><a href="#projetos" class="hover:text-white transition">Projetos em Destaque</a></li>
+            <li><a href="#equipe" class="hover:text-white transition">Especialistas</a></li>
+            <li><a href="#multiplicador" class="hover:text-white transition">Seja um Multiplicador</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Admin Link -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-purple-300">Contato Oficial</h4>
+          <div class="space-y-2 text-xs text-slate-300">
+            <p class="flex items-center gap-2">
+              <i class="ri-mail-line text-purple-400"></i>
+              <a href="mailto:contato@mult.eng.br" class="hover:text-white">contato@mult.eng.br</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="ri-whatsapp-line text-emerald-400"></i>
+              <a href="https://wa.me/555182532238" target="_blank" rel="noopener noreferrer" class="hover:text-white">(51) 8253-2238</a>
+            </p>
+          </div>
+
+          <div class="pt-4 flex items-center gap-3">
+            <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-purple-600 flex items-center justify-center text-white transition">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/mult_engenharia?stkn=ZDM3bnFmMXIxbTZv" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Mult Engenharia" class="w-9 h-9 rounded-full bg-white/10 hover:bg-purple-600 flex items-center justify-center text-white transition">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="admin/login.html" class="ml-4 text-[11px] font-bold text-slate-400 hover:text-purple-300 transition flex items-center gap-1">
+              <i class="ri-lock-line"></i> Painel Admin
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2025 Mult Serviços de Engenharia. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-300">Política de Privacidade</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300">LGPD</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/api-client.js?v=2.5"></script>
+  <script src="js/site.js?v=2.5"></script>
+</body>
+</html>

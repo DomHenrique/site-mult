@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratório de UX/UI - Section Projetos Mult Engenharia</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mult: {
+              dark: '#1D0B44',
+              navy: '#150634',
+              violet: '#6600CC',
+              indigo: '#4C1D95',
+              lilac: '#F7F5FC',
+              esg: '#10B981'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+            script: ['"Caveat"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <style>
+    /* 1. Soft 4-way radial feathering */
+    .mask-feather-radial {
+      -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, black 35%, rgba(0,0,0,0.8) 55%, transparent 85%);
+      mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, black 35%, rgba(0,0,0,0.8) 55%, transparent 85%);
+    }
+
+    /* 2. Organic bio-curve shape (conforme identidade visual Mult) */
+    .shape-mult-organic {
+      border-radius: 38% 62% 55% 45% / 48% 44% 56% 52%;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .shape-mult-organic:hover {
+      border-radius: 46% 54% 48% 52% / 54% 50% 50% 46%;
+    }
+
+    /* 3. Horizontal feather blend for monolithic card */
+    .mask-horizontal-feather {
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 95%, transparent 100%),
+                          linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-composite: source-in;
+      mask-composite: intersect;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.06); }
+    }
+    .animate-ambient-glow {
+      animation: pulseGlow 7s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased py-12 px-4 sm:px-8 space-y-20">
+
+  <!-- TOP COMPARISON HEADER -->
+  <div class="max-w-7xl mx-auto bg-white p-8 rounded-3xl border border-purple-200 shadow-lg text-center space-y-3">
+    <span class="badge-eyebrow">ESTUDO DE CASO &amp; ENGENHARIA DE DESIGN</span>
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-950">
+      Análise UX/UI &amp; Soluções Visuais: Section Projetos
+    </h1>
+    <p class="text-slate-600 max-w-3xl mx-auto text-base">
+      Comparativo em tempo real: Como transformar a imagem de alta definição <code class="text-purple-700 bg-purple-50 px-2 py-0.5 rounded font-mono text-xs">engenharia-de-alimentos.jpeg</code> em um ativo visual integrado ao ambiente do site, rompendo com a "moldura rígida" atual.
+    </p>
+  </div>
+
+  <!-- ========================================================================
+       CENÁRIO ATUAL (COMO ESTÁ HOJE: MOLDURADO E COM OVERLAY ESCURO)
+       ======================================================================== -->
+  <div class="max-w-7xl mx-auto space-y-4">
+    <div class="flex items-center justify-between border-b border-red-200 pb-3">
+      <div class="flex items-center gap-2">
+        <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 font-extrabold text-xs uppercase tracking-wider">
+          <i class="ri-close-circle-fill"></i> Cenário Atual
+        </span>
+        <h2 class="text-xl font-bold text-slate-900">Formatado em Caixa Rígida ("Moldurada")</h2>
+      </div>
+      <span class="text-xs text-slate-500">Dupla borda, cantos duplos, overlay escuro cobrindo detalhes</span>
+    </div>
+
+    <!-- Container da Seção Atual -->
+    <section class="py-12 bg-mult-lilac border border-purple-200/80 rounded-3xl p-6 sm:p-10">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Header da Section -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div class="max-w-2xl">
+            <span class="badge-eyebrow">PROJETO EM DESTAQUE</span>
+            <h3 class="text-3xl font-extrabold text-slate-950 mt-1 tracking-tight">
+              Casos reais que transformam indústrias.
+            </h3>
+          </div>
+          <p class="text-slate-600 text-sm max-w-md leading-relaxed">
+            A união entre rigor científico, formulações inovadoras e visão sustentável para criar novas categorias de mercado.
+          </p>
+        </div>
+
+        <!-- O Card Atual -->
+        <div class="mult-card bg-white p-6 sm:p-8 lg:p-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+            
+            <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+              <div>
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-purple-700 bg-purple-100/70 border border-purple-200/80 px-3.5 py-1 rounded-full">
+                    <i class="ri-sparkling-fill text-purple-600 text-xs"></i>
+                    Alimentos &amp; Biotecnologia
+                  </span>
+                  <span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">• Case Homologado</span>
+                </div>
+                <h4 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+                  Conheça uma nova categoria de alimento funcional
+                </h4>
+                <p class="text-slate-600 mt-4 text-base leading-relaxed">
+                  A Mult atua no desenvolvimento de alimentos inovadores, unindo ciência rigorosa, saúde preventiva e sustentabilidade de processos.
+                </p>
+              </div>
+
+              <div class="space-y-3 py-4 border-y border-purple-100/80">
+                <div class="p-3.5 rounded-2xl bg-purple-50/50 border border-purple-100/70 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+                    <i class="ri-flask-line text-lg font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-extrabold uppercase tracking-wide text-slate-900">DESENVOLVIMENTO</h5>
+                    <p class="text-xs text-slate-600 mt-0.5">Alimentos inovadores com sólida base científica e validação técnica.</p>
+                  </div>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-emerald-50/50 border border-emerald-100/70 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    <i class="ri-heart-pulse-line text-lg font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-extrabold uppercase tracking-wide text-slate-900">SAÚDE PREVENTIVA</h5>
+                    <p class="text-xs text-slate-600 mt-0.5">Mais qualidade de vida, bem-estar e nutrição equilibrada para as pessoas.</p>
+                  </div>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-sky-50/50 border border-sky-100/70 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
+                    <i class="ri-leaf-line text-lg font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-extrabold uppercase tracking-wide text-slate-900">SUSTENTABILIDADE</h5>
+                    <p class="text-xs text-slate-600 mt-0.5">Ingredientes conscientes e processos que respeitam os recursos do planeta.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2 flex items-center gap-4">
+                <a href="#contato" class="btn-mult-primary text-sm px-6 py-3.5">
+                  <span>SAIBA MAIS SOBRE O PROJETO</span>
+                  <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Coluna Direita Atual: MOLDURADA -->
+            <div class="lg:col-span-5 relative flex">
+              <div class="relative w-full rounded-2xl overflow-hidden shadow-xl border border-purple-100 group min-h-[440px] flex flex-col justify-end">
+                <img 
+                  src="assets/img/engenharia-de-alimentos.jpeg" 
+                  alt="DNA Funcional" 
+                  class="absolute inset-0 w-full h-full object-cover object-center"
+                />
+                <!-- Degradê Escuro que esconde a mão de baixo -->
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent"></div>
+                <div class="absolute top-4 right-4 z-10">
+                  <span class="px-3 py-1 rounded-full bg-white/90 text-[10px] font-extrabold uppercase text-purple-950">
+                    P&amp;D • Biotecnologia
+                  </span>
+                </div>
+                <!-- Box Escuro no rodapé -->
+                <div class="relative z-10 p-5">
+                  <div class="p-4 rounded-2xl bg-slate-950/75 backdrop-blur-md border border-white/15 text-white shadow-xl flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-purple-300 shrink-0 text-xl">
+                      <i class="ri-shield-check-line"></i>
+                    </div>
+                    <div>
+                      <span class="text-[10px] font-extrabold uppercase tracking-widest text-purple-300 block">CASE INSTITUCIONAL MULT</span>
+                      <p class="text-xs font-extrabold text-white">Do conhecimento a um futuro mais saudável.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ========================================================================
+       PROPOSTA 1 (RECOMENDADA): FUSÃO ATMOSFÉRICA SUAVE & ELEMENTOS FLUTUANTES
+       ======================================================================== -->
+  <div class="max-w-7xl mx-auto space-y-4 pt-6">
+    <div class="flex items-center justify-between border-b border-purple-300 pb-3">
+      <div class="flex items-center gap-2">
+        <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-800 font-extrabold text-xs uppercase tracking-wider">
+          <i class="ri-star-fill text-purple-600"></i> Proposta 1 (Recomendada)
+        </span>
+        <h2 class="text-xl font-bold text-slate-900">Fusão Atmosférica Suave (Zero Moldura + Luz Ambiente)</h2>
+      </div>
+      <span class="text-xs font-semibold text-purple-700">Sem bordas rígidas • Mãos e DNA 100% visíveis • Profundidade tridimensional</span>
+    </div>
+
+    <!-- Container da Seção Proposta 1 -->
+    <section class="py-16 bg-gradient-to-b from-[#F7F5FC] via-[#F3EEFA] to-[#F7F5FC] border border-purple-200/80 rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+      
+      <!-- Backlight Glow conectando os tons de estúdio da foto com a cor da marca -->
+      <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-purple-400/20 via-sky-300/20 to-indigo-300/10 rounded-full blur-[100px] pointer-events-none animate-ambient-glow"></div>
+      <div class="absolute bottom-4 left-1/4 w-80 h-80 bg-purple-200/30 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <!-- Header da Section -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div class="max-w-2xl">
+            <span class="badge-eyebrow">
+              <i class="ri-sparkling-fill text-purple-600"></i>
+              PROJETO EM DESTAQUE
+            </span>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-950 mt-2 tracking-tight">
+              Casos reais que transformam indústrias.
+            </h3>
+          </div>
+          <p class="text-slate-600 text-sm sm:text-base max-w-md leading-relaxed">
+            A união entre rigor científico, formulações inovadoras e visão sustentável para criar novas categorias de mercado.
+          </p>
+        </div>
+
+        <!-- Layout Aberto / Card Unificado com Fundo Translúcido e Sem Moldura Interna -->
+        <div class="bg-white/90 backdrop-blur-xl rounded-3xl border border-white/80 shadow-[0_12px_40px_-10px_rgba(29,11,68,0.08)] p-6 sm:p-10 lg:p-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <!-- Coluna Esquerda: Conteúdo Técnico e Pilares -->
+            <div class="lg:col-span-6 space-y-6">
+              <div>
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-purple-800 bg-purple-100/90 border border-purple-200 px-3.5 py-1 rounded-full shadow-xs">
+                    <i class="ri-dna-line text-purple-600"></i>
+                    Biotecnologia &amp; Alimentos Funcionais
+                  </span>
+                  <span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest hidden sm:inline-block">• Estudo Aplicado Mult</span>
+                </div>
+
+                <h4 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 leading-[1.2] tracking-tight">
+                  Conheça uma nova categoria de alimento funcional
+                </h4>
+                
+                <p class="text-slate-600 mt-4 text-base leading-relaxed">
+                  A Mult atua na fronteira da bioengenharia alimentar: formulações avançadas que unem compostos bioativos, sustentabilidade e conformidade regulatória plena.
+                </p>
+              </div>
+
+              <!-- 3 Pilares com Acabamento Premium -->
+              <div class="space-y-3 py-2">
+                
+                <div class="p-4 rounded-2xl bg-gradient-to-r from-purple-50/70 to-transparent border border-purple-100/80 flex items-start gap-4 transition hover:border-purple-300/80 hover:bg-purple-50">
+                  <div class="w-11 h-11 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0 shadow-xs">
+                    <i class="ri-flask-line text-xl font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs sm:text-sm font-extrabold uppercase tracking-wide text-slate-900">DESENVOLVIMENTO CIENTÍFICO</h5>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-0.5 leading-relaxed">Formulação, prototipagem e modelagem de bioativos com validação em escala piloto.</p>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-gradient-to-r from-emerald-50/70 to-transparent border border-emerald-100/80 flex items-start gap-4 transition hover:border-emerald-300/80 hover:bg-emerald-50">
+                  <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 shadow-xs">
+                    <i class="ri-heart-pulse-line text-xl font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs sm:text-sm font-extrabold uppercase tracking-wide text-slate-900">SAÚDE &amp; NUTRIÇÃO PREVENTIVA</h5>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-0.5 leading-relaxed">Ingredientes com eficácia comprovada para reforço imunológico e longevidade.</p>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-gradient-to-r from-sky-50/70 to-transparent border border-sky-100/80 flex items-start gap-4 transition hover:border-sky-300/80 hover:bg-sky-50">
+                  <div class="w-11 h-11 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 shadow-xs">
+                    <i class="ri-leaf-line text-xl font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs sm:text-sm font-extrabold uppercase tracking-wide text-slate-900">PROCESSOS SUSTENTÁVEIS</h5>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-0.5 leading-relaxed">Aproveitamento integral de matérias-primas e rotas de baixo impacto de carbono.</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- CTA & Garantia -->
+              <div class="pt-2 flex flex-wrap items-center gap-4">
+                <a href="#contato" class="btn-mult-primary text-sm px-7 py-3.5 shadow-lg shadow-purple-950/20 hover:shadow-xl hover:shadow-purple-700/30">
+                  <span>FALE COM NOSSAS ESPECIALISTAS</span>
+                  <i class="ri-arrow-right-line text-base"></i>
+                </a>
+                <span class="text-xs font-extrabold text-purple-900/80 uppercase tracking-wider inline-flex items-center gap-1.5">
+                  <i class="ri-shield-check-fill text-emerald-600 text-base"></i>
+                  Consultoria &amp; P&amp;D Homologado
+                </span>
+              </div>
+            </div>
+
+            <!-- Coluna Direita: A IMAGEM INTEGRADA ORGANICAMENTE (SEM MOLDURA) -->
+            <div class="lg:col-span-6 relative flex items-center justify-center">
+              
+              <!-- Halo de Luz Difusa atrás da imagem -->
+              <div class="absolute w-[90%] h-[90%] bg-gradient-to-tr from-purple-400/25 via-sky-300/25 to-purple-200/10 rounded-full blur-3xl pointer-events-none"></div>
+
+              <!-- Container da Imagem sem bordas rígidas, com máscara de desvanecimento suave nas bordas -->
+              <div class="relative w-full max-w-[480px] flex items-center justify-center">
+                
+                <!-- A Imagem Pura com Fade Radial Suave nas bordas para casar com o branco/lilás -->
+                <img 
+                  src="assets/img/engenharia-de-alimentos.jpeg" 
+                  alt="Pesquisa e Engenharia de Alimentos Funcionais - Mult" 
+                  class="w-full h-auto max-h-[560px] object-contain select-none mask-feather-radial drop-shadow-2xl transition duration-500 hover:scale-[1.02]"
+                />
+
+                <!-- Badges Flutuantes em Glassmorphism conectadas contextualmente (sem tapar nada crítico) -->
+                
+                <!-- Badge Superior: Ciência & DNA -->
+                <div class="absolute -top-2 right-2 sm:right-6 z-20 animate-bounce" style="animation-duration: 4s;">
+                  <div class="px-3.5 py-2 rounded-2xl bg-white/90 backdrop-blur-md border border-white shadow-lg flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center text-sm font-bold">
+                      <i class="ri-microscope-line"></i>
+                    </div>
+                    <div>
+                      <span class="text-[9px] font-black uppercase tracking-wider text-purple-900 block">ENGENHARIA MOLECULAR</span>
+                      <span class="text-[11px] font-extrabold text-slate-800">Bioativos &amp; Nutrição Ativa</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Badge Lateral / Inferior: Precisão Técnica -->
+                <div class="absolute bottom-6 left-0 sm:left-4 z-20">
+                  <div class="px-3.5 py-2 rounded-2xl bg-white/90 backdrop-blur-md border border-white shadow-lg flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm font-bold">
+                      <i class="ri-check-double-line"></i>
+                    </div>
+                    <div>
+                      <span class="text-[9px] font-black uppercase tracking-wider text-emerald-800 block">SEGURANÇA &amp; ANVISA</span>
+                      <span class="text-[11px] font-extrabold text-slate-800">100% Validado em Laboratório</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ========================================================================
+       PROPOSTA 2: CARD MONOLÍTICO COM SANGRIA DIREITA & TRANSIÇÃO EDITORIAL
+       ======================================================================== -->
+  <div class="max-w-7xl mx-auto space-y-4 pt-6">
+    <div class="flex items-center justify-between border-b border-indigo-300 pb-3">
+      <div class="flex items-center gap-2">
+        <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 font-extrabold text-xs uppercase tracking-wider">
+          <i class="ri-layout-right-line"></i> Proposta 2
+        </span>
+        <h2 class="text-xl font-bold text-slate-900">Card Monolítico Editorial com Sangria Direita</h2>
+      </div>
+      <span class="text-xs font-semibold text-indigo-700">Imagem sangrada até a borda do card • Transição suave em degradê</span>
+    </div>
+
+    <section class="py-12 bg-mult-lilac border border-purple-200/80 rounded-3xl p-6 sm:p-10">
+      <div class="max-w-6xl mx-auto">
+        
+        <!-- Header da Section -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div class="max-w-2xl">
+            <span class="badge-eyebrow">PROJETO EM DESTAQUE</span>
+            <h3 class="text-3xl font-extrabold text-slate-950 mt-1 tracking-tight">
+              Casos reais que transformam indústrias.
+            </h3>
+          </div>
+          <p class="text-slate-600 text-sm max-w-md leading-relaxed">
+            A união entre rigor científico, formulações inovadoras e visão sustentável para criar novas categorias de mercado.
+          </p>
+        </div>
+
+        <!-- Card Monolítico sem padding na coluna direita -->
+        <div class="mult-card bg-white rounded-3xl overflow-hidden border border-purple-100/90 shadow-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+            
+            <!-- Coluna de Texto com padding generoso -->
+            <div class="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-6">
+              <div>
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-purple-700 bg-purple-100/80 px-3.5 py-1 rounded-full">
+                    <i class="ri-flask-fill text-purple-600 text-xs"></i>
+                    Alimentos &amp; Biotecnologia
+                  </span>
+                  <span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">• Case Homologado</span>
+                </div>
+                <h4 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
+                  Conheça uma nova categoria de alimento funcional
+                </h4>
+                <p class="text-slate-600 mt-4 text-base leading-relaxed">
+                  A Mult atua no desenvolvimento de alimentos inovadores, unindo ciência rigorosa, saúde preventiva e sustentabilidade de processos.
+                </p>
+              </div>
+
+              <div class="space-y-3 py-4 border-y border-purple-100/80">
+                <div class="p-3.5 rounded-2xl bg-purple-50/60 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+                    <i class="ri-flask-line text-lg font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-extrabold uppercase tracking-wide text-slate-900">DESENVOLVIMENTO</h5>
+                    <p class="text-xs text-slate-600 mt-0.5">Alimentos inovadores com sólida base científica e validação técnica.</p>
+                  </div>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-emerald-50/60 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    <i class="ri-heart-pulse-line text-lg font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-extrabold uppercase tracking-wide text-slate-900">SAÚDE PREVENTIVA</h5>
+                    <p class="text-xs text-slate-600 mt-0.5">Mais qualidade de vida, bem-estar e nutrição equilibrada para as pessoas.</p>
+                  </div>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-sky-50/60 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
+                    <i class="ri-leaf-line text-lg font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-extrabold uppercase tracking-wide text-slate-900">SUSTENTABILIDADE</h5>
+                    <p class="text-xs text-slate-600 mt-0.5">Ingredientes conscientes e processos que respeitam os recursos do planeta.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2 flex items-center gap-4">
+                <a href="#contato" class="btn-mult-primary text-sm px-6 py-3.5">
+                  <span>SAIBA MAIS SOBRE O PROJETO</span>
+                  <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Coluna Direita: IMAGEM SANGRADA SEM MOLDURA INTERNA -->
+            <div class="lg:col-span-5 relative min-h-[460px] lg:min-h-full bg-slate-100 overflow-hidden">
+              <img 
+                src="assets/img/engenharia-de-alimentos.jpeg" 
+                alt="DNA Alimentos" 
+                class="absolute inset-0 w-full h-full object-cover object-center scale-105 transition duration-700 hover:scale-110"
+              />
+              <!-- Gradiente de transição suave à esquerda para fundir a foto com o card branco -->
+              <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white via-white/70 to-transparent pointer-events-none hidden lg:block"></div>
+              
+              <!-- Selo Flutuante Clean de Vidro no Topo -->
+              <div class="absolute top-6 right-6 z-10">
+                <span class="px-3.5 py-1.5 rounded-full bg-white/85 backdrop-blur-md text-xs font-extrabold uppercase tracking-wider text-purple-950 shadow-md border border-white/60">
+                  <i class="ri-award-line text-purple-700"></i> P&amp;D • Alimentos do Futuro
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+  <!-- ========================================================================
+       PROPOSTA 3: SILHUETA ORGÂNICA BIOTECNOLÓGICA (CURVAS FLUIDAS MULT)
+       ======================================================================== -->
+  <div class="max-w-7xl mx-auto space-y-4 pt-6">
+    <div class="flex items-center justify-between border-b border-emerald-300 pb-3">
+      <div class="flex items-center gap-2">
+        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-xs uppercase tracking-wider">
+          <i class="ri-shapes-line"></i> Proposta 3
+        </span>
+        <h2 class="text-xl font-bold text-slate-900">Silhueta Orgânica Fluida (Linguagem da Marca Mult)</h2>
+      </div>
+      <span class="text-xs font-semibold text-emerald-700">Contorno biomórfico suave • Rompe ângulos retos • Integração com a identidade visual</span>
+    </div>
+
+    <section class="py-12 bg-gradient-to-b from-[#F7F5FC] to-white border border-purple-200/80 rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+      <!-- Glow orgânico ao fundo -->
+      <div class="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-purple-300/30 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <!-- Header da Section -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div class="max-w-2xl">
+            <span class="badge-eyebrow">PROJETO EM DESTAQUE</span>
+            <h3 class="text-3xl font-extrabold text-slate-950 mt-1 tracking-tight">
+              Casos reais que transformam indústrias.
+            </h3>
+          </div>
+          <p class="text-slate-600 text-sm max-w-md leading-relaxed">
+            A união entre rigor científico, formulações inovadoras e visão sustentável para criar novas categorias de mercado.
+          </p>
+        </div>
+
+        <!-- Card Branco com Silhueta Biomórfica -->
+        <div class="bg-white rounded-3xl p-8 sm:p-10 lg:p-12 shadow-xl border border-purple-100/70">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <!-- Coluna de Texto -->
+            <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+              <div>
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-purple-700 bg-purple-100/80 px-3.5 py-1 rounded-full">
+                    <i class="ri-sparkling-fill text-purple-600 text-xs"></i>
+                    Alimentos &amp; Biotecnologia
+                  </span>
+                  <span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">• Case Homologado</span>
+                </div>
+                <h4 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight">
+                  Conheça uma nova categoria de alimento funcional
+                </h4>
+                <p class="text-slate-600 mt-4 text-base leading-relaxed">
+                  A Mult atua no desenvolvimento de alimentos inovadores, unindo ciência rigorosa, saúde preventiva e sustentabilidade de processos.
+                </p>
+              </div>
+
+              <div class="space-y-3 py-4 border-y border-purple-100/80">
+                <div class="p-3.5 rounded-2xl bg-purple-50/60 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center shrink-0">
+                    <i class="ri-flask-line text-lg font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-extrabold uppercase tracking-wide text-slate-900">DESENVOLVIMENTO</h5>
+                    <p class="text-xs text-slate-600 mt-0.5">Alimentos inovadores com sólida base científica e validação técnica.</p>
+                  </div>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-emerald-50/60 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    <i class="ri-heart-pulse-line text-lg font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-extrabold uppercase tracking-wide text-slate-900">SAÚDE PREVENTIVA</h5>
+                    <p class="text-xs text-slate-600 mt-0.5">Mais qualidade de vida, bem-estar e nutrição equilibrada para as pessoas.</p>
+                  </div>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-sky-50/60 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
+                    <i class="ri-leaf-line text-lg font-bold"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-extrabold uppercase tracking-wide text-slate-900">SUSTENTABILIDADE</h5>
+                    <p class="text-xs text-slate-600 mt-0.5">Ingredientes conscientes e processos que respeitam os recursos do planeta.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2 flex items-center gap-4">
+                <a href="#contato" class="btn-mult-primary text-sm px-7 py-3.5">
+                  <span>SAIBA MAIS SOBRE O PROJETO</span>
+                  <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Coluna Direita: FORMA ORGÂNICA BIOMÓRFICA MULT -->
+            <div class="lg:col-span-5 relative flex items-center justify-center">
+              
+              <!-- Halo gradiente violeta/esg atrás do blob -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-purple-500/20 via-sky-400/20 to-emerald-400/10 rounded-full blur-2xl scale-105 pointer-events-none"></div>
+
+              <!-- Container Orgânico Fluido -->
+              <div class="relative w-full max-w-[420px] aspect-[4/5] shape-mult-organic shadow-2xl shadow-purple-900/15 border-2 border-white">
+                <img 
+                  src="assets/img/engenharia-de-alimentos.jpeg" 
+                  alt="DNA Alimentos" 
+                  class="w-full h-full object-cover object-center scale-105 transition duration-700 hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              <!-- Selo Flutuante -->
+              <div class="absolute -bottom-3 right-4 z-10">
+                <span class="px-4 py-2 rounded-2xl bg-white/95 backdrop-blur-md text-xs font-extrabold uppercase tracking-wider text-purple-950 shadow-xl border border-purple-100 flex items-center gap-2">
+                  <i class="ri-sparkling-fill text-purple-600"></i> P&amp;D Inovação Mult
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
