@@ -630,11 +630,12 @@ async function initDynamicTeam() {
 
   // Renderizar os cards imersivos
   track.innerHTML = members.map((m, idx) => {
+    const nameClean = (m.name || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     const roleClean = (m.role || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    const isFounder = roleClean.includes('fundad');
+    const isFounder = nameClean.includes('taiana') || roleClean.includes('fundad') || roleClean.includes('founder');
 
     return `
-    <div class="carousel-card bg-[#120428] ring-1 ring-white/10" data-index="${idx}">
+    <div class="carousel-card ${isFounder ? 'is-founder' : ''} bg-[#120428] ring-1 ${isFounder ? 'ring-orange-500/40' : 'ring-white/10'}" data-index="${idx}">
       <!-- Imagem de Fundo de Alta Definição -->
       <img 
         src="${m.photo_url || 'assets/img/taiana-franco.jpg'}" 
@@ -650,19 +651,19 @@ async function initDynamicTeam() {
 
       <!-- Selo Superior Flutuante de Multiplicadora / Fundadora -->
       <div class="absolute top-4 left-4 right-4 flex items-center justify-between z-10 pointer-events-none">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1D0B44]/80 backdrop-blur-md border ${isFounder ? 'border-orange-500/50 text-orange-400' : 'border-purple-500/30 text-purple-200'} text-[10px] font-extrabold uppercase tracking-widest shadow-sm">
-          <span class="w-1.5 h-1.5 rounded-full ${isFounder ? 'bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.8)]' : 'bg-emerald-400'} animate-pulse"></span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full ${isFounder ? 'bg-orange-950/85 border border-orange-500/60 text-orange-400 shadow-[0_0_12px_rgba(249,115,22,0.3)]' : 'bg-[#1D0B44]/80 border border-purple-500/30 text-purple-200'} backdrop-blur-md text-[10px] font-extrabold uppercase tracking-widest shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full ${isFounder ? 'bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,1)]' : 'bg-emerald-400'} animate-pulse"></span>
           <span class="${isFounder ? 'text-orange-400 font-black' : 'text-purple-200'}">${isFounder ? 'Fundadora Mult' : 'Multiplicadora Mult'}</span>
         </span>
-        <span class="w-7 h-7 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center ${isFounder ? 'text-orange-400 border-orange-500/40' : 'text-purple-300 border-white/10'} border text-xs">
-          <i class="ri-award-line"></i>
+        <span class="w-7 h-7 rounded-full ${isFounder ? 'bg-orange-950/80 border border-orange-500/60 text-orange-400 shadow-[0_0_12px_rgba(249,115,22,0.4)]' : 'bg-black/40 border border-white/10 text-purple-300'} backdrop-blur-md flex items-center justify-center text-xs">
+          <i class="${isFounder ? 'ri-vip-crown-2-fill' : 'ri-award-line'}"></i>
         </span>
       </div>
 
       <!-- Conteúdo do Card (Inferior) -->
       <div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col justify-end z-10 text-left">
         <!-- Pílula Especialidade / Cargo -->
-        <span class="inline-block self-start text-[11px] font-extrabold uppercase tracking-wider text-purple-200 bg-purple-900/80 backdrop-blur-md px-3 py-1 rounded-lg border border-purple-400/30 mb-2 shadow-sm">
+        <span class="inline-block self-start text-[11px] font-extrabold uppercase tracking-wider ${isFounder ? 'text-amber-200 bg-orange-950/90 border border-orange-500/50 shadow-[0_0_12px_rgba(249,115,22,0.25)]' : 'text-purple-200 bg-purple-900/80 border border-purple-400/30'} backdrop-blur-md px-3 py-1 rounded-lg mb-2 shadow-sm">
           ${escapeHtml(m.role)}
         </span>
 
