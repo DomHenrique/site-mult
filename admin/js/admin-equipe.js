@@ -16,7 +16,7 @@ window.AdminEquipe = {
               <i class="ri-team-line text-purple-400"></i> Gestão da Equipe Mult
             </h3>
             <p class="text-xs text-slate-400 mt-1">
-              Cadastre as consultoras e especialistas da rede exibidas na seção Nossas Multiplicadoras.
+              Cadastre as assessoras e especialistas da rede exibidas na seção Nossas Multiplicadoras.
             </p>
           </div>
           <button id="addMemberBtn" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 font-bold text-sm text-white shadow-lg shadow-purple-600/30 flex items-center gap-2 transition">

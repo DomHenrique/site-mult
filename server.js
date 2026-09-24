@@ -66,7 +66,7 @@ try {
     `);
     insertBanner.run(
       'Soluções técnicas para um futuro mais saudável.',
-      'Um hub multidisciplinar de especialistas que conecta conhecimento, engenharia e inovação para desenvolver produtos, solucionar desafios e impulsionar negócios.',
+      'Um ecossistema técnico 100% feminino multidisciplinar de especialistas que conecta conhecimento, engenharia e inovação para desenvolver produtos, solucionar desafios e impulsionar negócios.',
       'ENGENHARIA • CIÊNCIA • INOVAÇÃO • SUSTENTABILIDADE',
       'FALE SOBRE SEU PROJETO',
       '#contato',

@@ -609,10 +609,10 @@ async function initDynamicTeam() {
   if (!track) return;
 
   const fallbackMembers = [
-    { name: 'Taiana Franco', role: 'Fundadora & Eng. Química', bio: 'Especialista em formulações técnicas, inovação em produtos e liderança do hub Mult.', photo_url: 'assets/img/taiana-franco.jpg', linkedin_url: 'https://www.linkedin.com/in/taiana-franco-mult' },
-    { name: 'Cristina Pereira', role: 'Seleção de Especialistas', bio: 'Head de recrutamento técnico e governança da rede de consultores parceiros.', photo_url: 'assets/img/cristina-pereira.jpg', linkedin_url: 'https://www.linkedin.com/company/mult-engenharia' },
+    { name: 'Taiana França', role: 'Fundadora & Eng. Química', bio: 'Especialista em formulações técnicas, inovação em produtos e liderança do ecossistema técnico feminino Mult.', photo_url: 'assets/img/taiana-franco.jpg', linkedin_url: 'https://www.linkedin.com/in/taiana-franco-mult' },
+    { name: 'Cristina Pereira', role: 'Seleção de Especialistas', bio: 'Head de recrutamento técnico e governança da rede de especialistas e assessoras parceiras.', photo_url: 'assets/img/cristina-pereira.jpg', linkedin_url: 'https://www.linkedin.com/company/mult-engenharia' },
     { name: 'Juliana Martins', role: 'Construção da Solução', bio: 'Gerente técnica de projetos de engenharia e sustentabilidade industrial.', photo_url: 'assets/img/juliana-martins.jpg', linkedin_url: 'https://www.linkedin.com/company/mult-engenharia' },
-    { name: 'Fernanda Alves', role: 'Meio Ambiente & ESG', bio: 'Consultora sênior em conformidade ambiental, licenciamento e governança ESG.', photo_url: 'assets/img/fernanda-alves.jpg', linkedin_url: 'https://www.linkedin.com/company/mult-engenharia' },
+    { name: 'Fernanda Alves', role: 'Meio Ambiente & ESG', bio: 'Assessora sênior em conformidade ambiental, licenciamento e governança ESG.', photo_url: 'assets/img/fernanda-alves.jpg', linkedin_url: 'https://www.linkedin.com/company/mult-engenharia' },
     { name: 'Renata Souza', role: 'SST & Gestão de Riscos', bio: 'Especialista em Saúde e Segurança do Trabalho, adequação a NRs e prevenção.', photo_url: 'assets/img/renata-souza.jpg', linkedin_url: 'https://www.linkedin.com/company/mult-engenharia' },
     { name: 'Carla Mendes', role: 'Tecnologia & Inovação', bio: 'Líder em transformação digital, engenharia de dados e soluções inovadoras.', photo_url: 'assets/img/carla-mendes.jpg', linkedin_url: 'https://www.linkedin.com/company/mult-engenharia' }
   ];
@@ -693,7 +693,7 @@ async function initDynamicTeam() {
             </span>
           `}
           <span class="text-[10px] font-extrabold uppercase tracking-widest text-purple-300/70">
-            HUB MULT
+            ECOSSISTEMA MULT
           </span>
         </div>
       </div>

@@ -167,7 +167,7 @@ try {
         ");
         $insertBanner->execute([
             'Soluções técnicas para um futuro mais saudável.',
-            'Um hub multidisciplinar de especialistas que conecta conhecimento, engenharia e inovação para desenvolver produtos, solucionar desafios e impulsionar negócios.',
+            'Um ecossistema técnico 100% feminino multidisciplinar de especialistas que conecta conhecimento, engenharia e inovação para desenvolver produtos, solucionar desafios e impulsionar negócios.',
             'ENGENHARIA • CIÊNCIA • INOVAÇÃO • SUSTENTABILIDADE',
             'FALE SOBRE SEU PROJETO',
             '#contato',
@@ -229,7 +229,7 @@ try {
             1,
             'ENGENHARIA • CIÊNCIA • INOVAÇÃO • SUSTENTABILIDADE',
             'Soluções técnicas para um futuro mais saudável.',
-            'Um hub multidisciplinar de especialistas que conecta conhecimento, engenharia e inovação para desenvolver produtos, solucionar desafios e impulsionar negócios.',
+            'Um ecossistema técnico 100% feminino multidisciplinar de especialistas que conecta conhecimento, engenharia e inovação para desenvolver produtos, solucionar desafios e impulsionar negócios.',
             'FALE SOBRE SEU PROJETO',
             '#contato',
             'assets/img/hero-founder-clean.png',
@@ -269,10 +269,10 @@ try {
     $stmtTeam = $pdo->query("SELECT COUNT(*) as count FROM team_members");
     if ($stmtTeam->fetch()['count'] == 0) {
         $pdo->exec("INSERT INTO team_members (name, role, bio, photo_url, linkedin_url, display_order, is_active) VALUES
-            ('Taiana Franco', 'Fundadora & Eng. Química', 'Especialista em formulações técnicas, inovação em produtos e liderança do hub Mult.', 'assets/img/taiana-franco.jpg', 'https://www.linkedin.com/in/taiana-franco-mult', 1, 1),
-            ('Cristina Pereira', 'Seleção de Especialistas', 'Head de recrutamento técnico e governança da rede de consultores parceiros.', 'assets/img/cristina-pereira.jpg', 'https://www.linkedin.com/company/mult-engenharia', 2, 1),
+            ('Taiana Franco', 'Fundadora & Eng. Química', 'Especialista em formulações técnicas, inovação em produtos e liderança do ecossistema técnico 100% feminino Mult.', 'assets/img/taiana-franco.jpg', 'https://www.linkedin.com/in/taiana-franco-mult', 1, 1),
+            ('Cristina Pereira', 'Seleção de Especialistas', 'Head de recrutamento técnico e governança da rede de assessores parceiros.', 'assets/img/cristina-pereira.jpg', 'https://www.linkedin.com/company/mult-engenharia', 2, 1),
             ('Juliana Martins', 'Construção da Solução', 'Gerente técnica de projetos de engenharia e sustentabilidade industrial.', 'assets/img/juliana-martins.jpg', 'https://www.linkedin.com/company/mult-engenharia', 3, 1),
-            ('Fernanda Alves', 'Meio Ambiente & ESG', 'Consultora sênior em conformidade ambiental, licenciamento e governança ESG.', 'assets/img/fernanda-alves.jpg', 'https://www.linkedin.com/company/mult-engenharia', 4, 1),
+            ('Fernanda Alves', 'Meio Ambiente & ESG', 'Assessora sênior em conformidade ambiental, licenciamento e governança ESG.', 'assets/img/fernanda-alves.jpg', 'https://www.linkedin.com/company/mult-engenharia', 4, 1),
             ('Renata Souza', 'SST & Gestão de Riscos', 'Especialista em Saúde e Segurança do Trabalho, adequação a NRs e prevenção.', 'assets/img/renata-souza.jpg', 'https://www.linkedin.com/company/mult-engenharia', 5, 1),
             ('Carla Mendes', 'Tecnologia & Inovação', 'Líder em transformação digital, engenharia de dados e soluções inovadoras.', 'assets/img/carla-mendes.jpg', 'https://www.linkedin.com/company/mult-engenharia', 6, 1)
         ");
